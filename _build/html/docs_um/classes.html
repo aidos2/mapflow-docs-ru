@@ -1,0 +1,258 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ru" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Urban Mapping classes &mdash; документация Mapflow 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo_mapflow.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Urban Mapping classes</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Mapflow</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Urban Mapping classes</li>
+      <li class="wy-breadcrumbs-aside">
+    <ul class="this-page-menu">
+        <li><a href="https://github.com/Geoalert/mapflow_docs/edit/master/docs_um/classes.rst"
+               rel="nofollow">Edit on GitHub</a></li>
+    </ul>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="urban-mapping-classes">
+<h1>Urban Mapping classes<a class="headerlink" href="#urban-mapping-classes" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Here is presented a list of classes for «Buildings» and «Construction» Mapping Models.
+Here we aim to assign classes to the natural and man-made objects that have a clear interpretation either in satellite or in aerial imagery, however method is proposed to be extended to include more classes depending on the resulting accuracy in differenet urban domains.</p>
+<blockquote>
+<div><table class="colwidths-given longtable docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>CLASS_ID</p></th>
+<th class="head"><p>CLASS NAME</p></th>
+<th class="head"><p>DESCRIPTION</p></th>
+<th class="head"><p>OSM refereral tag</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>101</p></td>
+<td><p>Apartment building</p></td>
+<td><p>Roof footprints of the multistorey apartment buildings</p></td>
+<td><p>building=yes
+building=residential
+building=appartments</p></td>
+</tr>
+<tr class="row-odd"><td><p>102</p></td>
+<td><p>House</p></td>
+<td><p>Mostly private houses (usually represents a single household)</p></td>
+<td><p>building=house
+building=residential</p></td>
+</tr>
+<tr class="row-even"><td><p>103</p></td>
+<td><p>Industrial building</p></td>
+<td><p>Mostly industrial (Plants, large hangars, warehouses, etc.)</p></td>
+<td><p>building=industrial</p></td>
+</tr>
+<tr class="row-odd"><td><p>104</p></td>
+<td><p>Commercial building</p></td>
+<td><p>Offices, retail, etc.</p></td>
+<td><p>building=commercial</p></td>
+</tr>
+<tr class="row-even"><td><p>105</p></td>
+<td><p>Other non-residential buildings</p></td>
+<td><p>Garages, transformer boxes, small hangars, etc.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>106</p></td>
+<td><p>Construction site</p></td>
+<td></td>
+<td><p>landuse=construction</p></td>
+</tr>
+<tr class="row-even"><td><p>107</p></td>
+<td><p>Constructing building</p></td>
+<td><p>Construction is in progress</p></td>
+<td><p>building=construction</p></td>
+</tr>
+<tr class="row-odd"><td><p>110</p></td>
+<td><p>Religious buildings</p></td>
+<td></td>
+<td><p>building=religious</p></td>
+</tr>
+<tr class="row-even"><td><p>111</p></td>
+<td><p>Apartment block</p></td>
+<td><p>Merged buildings in high density construction areas, apartment blocks</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>112</p></td>
+<td><p>Civic building</p></td>
+<td><p>Civic buildings, public places like hospitals, government, schools etc.</p></td>
+<td><p>building=civic</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+        <p>Contact us at <a href=mailto:help@geoalert.io>help@geoalert.io</a> and on:</p>
+        <p>
+            <a href="https://twitter.com/geoalertinc"><img style="width: 30px; height: 30px; margin-right: 20px" src="../_static/social/Twitter_Social_Icon_Circle_Color.svg" alt="twitter"></a>
+            <a href="https://www.facebook.com/GeoAlertLtd/"><img style="width: 30px; height: 30px; margin-right: 20px" src="../_static/social/f_logo_RGB-Blue_58.png" alt="facebook"></a>
+            <a href="https://medium.com/geoalert-platform-urban-monitoring"><img style="width: 30px; height: 30px;" src="../_static/social/Medium_Monogram.svg" alt="medium"></a>
+        </p>
+    
+    <p>
+        
+        &copy; Авторские права 2020, Geoalert
+    </p>
+  </div>
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book">  <a href="https://docs.mapflow.ai/ru/">RU</a></span>
+      <a href="https://geoalert.io">Geoalert.io</a>
+    </span>
+
+  </div>
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

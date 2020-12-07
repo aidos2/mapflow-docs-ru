@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ru" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Модели Mapflow &mdash; документация Mapflow 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo_mapflow.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Модели Mapflow</a></li>
+<li><a class="reference internal" href="#id1">Справочник по моделям</a><ul>
+<li><a class="reference internal" href="#id2">Здания</a></li>
+<li><a class="reference internal" href="#id3">Лес</a></li>
+<li><a class="reference internal" href="#id4">Дороги</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Mapflow</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Модели Mapflow</li>
+      <li class="wy-breadcrumbs-aside">
+    <ul class="this-page-menu">
+        <li><a href="https://github.com/Geoalert/mapflow_docs/edit/master/docs_userguides/pipelines.rst"
+               rel="nofollow">Edit on GitHub</a></li>
+    </ul>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>Основная уникальная технология Mapflow - модели семантического анализа, построенные на нейросетях глубокого обучения, и постпроцессинг векторных данных.</p>
+<div class="section" id="mapflow">
+<h1>Модели Mapflow<a class="headerlink" href="#mapflow" title="Ссылка на этот заголовок">¶</a></h1>
+<p>🏠 <strong>Здания</strong>
+Выделение контуров зданий по крышам зданий на спутниковых снимках высокого пространственного разрешения</p>
+<p>Дополнительные опции:</p>
+<ul class="simple">
+<li><p><strong>Классификация по типологии зданий</strong> – Типология зданий представлена основными классами: многоквартирные дома; частный сектор; пром. зоны; коммерческая недвижимость; иные нежилые (see <a class="reference external" href="https://mapflow.ai">справочник по классам Urban Mapping</a>)</p></li>
+<li><p><strong>Высоты зданий</strong></p></li>
+</ul>
+<p>Определение высоты зданий по косвенными признакам - длине тени и видимой части стены.
+Сдвиг на основание</p>
+<p>🎄 <strong>Лес</strong>
+Выделение масок древесно-кустарниковой растительности на RGB снимках высокого пространственного разрешения (2 метра) без разделения по типу, плотности и высоте растительности</p>
+<p>Дополнительные опции:</p>
+<ul class="simple">
+<li><p><strong>Высоты леса</strong> – Разделение области древесно-кустарниковой растительности на высотные классы по заданным порогам: по умолчанию 0-4 м, 4-10 м, 10+ м. Участки леса каждого высотного класса сохраняются в отдельных полигонах, высотный класс указывается в его свойства</p></li>
+<li><p><strong>Классификация</strong> – Классификация участков леса по плотности зарастаний: высокий плотный лес, низкая кустарниковая растительность, редколесье.</p></li>
+</ul>
+<p>🚗 <strong>Дороги</strong>
+Выделение маски дорог на спутниковых снимках высокого пространственного разрешения</p>
+<p>Дополнительные опции:</p>
+<ul class="simple">
+<li><p>Классификация по дорожному покрытию</p></li>
+<li><p>Преобразование в связанный граф</p></li>
+</ul>
+<p>🏗️ <strong>Строительство</strong>
+Классификация изображений на спутниковых снимках высокого разрешения для определения стройплощадок и строящихся объектов</p>
+</div>
+<div class="section" id="id1">
+<h1>Справочник по моделям<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="id2">
+<h2>Здания<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<blockquote>
+<div><table class="colwidths-given longtable docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Здания</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Входные данные, min. GSD m/px</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Сегментация</p></td>
+<td><p>Выделение контуров зданий по крышам зданий на спутниковых снимках высокого пространственного разрешения</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Классифиаация</p></td>
+<td><p>Типология зданий представлена основными классами, см справочник</p></td>
+<td><p>RGB 0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Building heights</p></td>
+<td><p>Определение высоты зданий по косвенными признакам - длине тени и видимой части стены.</p></td>
+<td><p>RGB 0.5</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>Лес<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<blockquote>
+<div><table class="colwidths-given longtable docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Forest</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Model input, min. GSD m/px</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Segmentation</p></td>
+<td><p>Extract segmentation masks of forested areas from high-resolution RGB images</p></td>
+<td><p>RGB, 2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Classification</p></td>
+<td><p>Classify the areas of vegetation and shrub vegetation by height classes according to the specified thresholds: by default 0-4 m, 4-10 m, 10+ m. Forest areas of each height class are polygonized in separate features, the height class is indicated in its properties</p></td>
+<td><p>RGB, 2</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h2>Дороги<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<blockquote>
+<div><table class="colwidths-given longtable docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Дороги</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Входные данные, min. GSD m/px</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Сегментация</p></td>
+<td><p>Выделение маски дорог на спутниковых снимках высокого пространственного разрешения</p></td>
+<td><p>RGB, 1</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+        <p>Contact us at <a href=mailto:help@geoalert.io>help@geoalert.io</a> and on:</p>
+        <p>
+            <a href="https://twitter.com/geoalertinc"><img style="width: 30px; height: 30px; margin-right: 20px" src="../_static/social/Twitter_Social_Icon_Circle_Color.svg" alt="twitter"></a>
+            <a href="https://www.facebook.com/GeoAlertLtd/"><img style="width: 30px; height: 30px; margin-right: 20px" src="../_static/social/f_logo_RGB-Blue_58.png" alt="facebook"></a>
+            <a href="https://medium.com/geoalert-platform-urban-monitoring"><img style="width: 30px; height: 30px;" src="../_static/social/Medium_Monogram.svg" alt="medium"></a>
+        </p>
+    
+    <p>
+        
+        &copy; Авторские права 2020, Geoalert
+    </p>
+  </div>
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book">  <a href="https://docs.mapflow.ai/ru/">RU</a></span>
+      <a href="https://geoalert.io">Geoalert.io</a>
+    </span>
+
+  </div>
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

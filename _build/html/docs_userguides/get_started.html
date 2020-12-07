@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ru" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Начало работы &mdash; документация Mapflow 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo_mapflow.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Начало работы</a><ul>
+<li><a class="reference internal" href="#mapflow-web">Mapflow – Web приложение</a><ul>
+<li><a class="reference internal" href="#id2">Как запускать обраобтку</a></li>
+<li><a class="reference internal" href="#id3">Работа с результатами обработки</a></li>
+<li><a class="reference internal" href="#api">Работа с API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Mapflow</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Начало работы</li>
+      <li class="wy-breadcrumbs-aside">
+    <ul class="this-page-menu">
+        <li><a href="https://github.com/Geoalert/mapflow_docs/edit/master/docs_userguides/get_started.rst"
+               rel="nofollow">Edit on GitHub</a></li>
+    </ul>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Начало работы<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Ура, вам интересен анализ данных дистанционного зондирования Земли (ДЗЗ) и применения их в своей работе!</p>
+<p>«Спутниковые изображения» - это фотографии, полученные с космических аппаратов дистанционного зондирования. Картография и пространственный анализ базируются на трех основных стадиях обработки данных:</p>
+<ul class="simple">
+<li><p>Доступ к данным ДЗЗ (например спутникая или аэрофотосъемка)</p></li>
+<li><p>Автоматический препроцессинг и анализ –  здесь вы сможете использовать <a class="reference external" href="https://mapflow.ai">Mapflow</a> 💥</p></li>
+<li><p>Работа в ГИС – проверка автоматических результатов и подготовка их для дальнейшей работы</p></li>
+</ul>
+<p>Платформа Mapflow упправляет цепочками обработки данных ДЗЗ, которые вы запускает (так называемые «потоковые обработки»), помогая пользователю на всех стадиях обработки.
+Но главное - наличие встроенных алгоритмов семантического анализа, которые позволяют выделять множество семантически связанных объектов и преобразовывать их в векторные геоданные.</p>
+<div class="section" id="mapflow-web">
+<h2>Mapflow – Web приложение<a class="headerlink" href="#mapflow-web" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="id2">
+<h3>Как запускать обраобтку<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Пользоваться платформой очень просто.
+Ниже отражен пошаговый процесс запуска обработки:</p>
+<div class="figure align-center" id="ui-mapflow-run-flow">
+<a class="reference internal image-reference" href="../_images/ui_flow_basic.png"><img alt="../_images/ui_flow_basic.png" src="../_images/ui_flow_basic.png" style="width: 15cm;" /></a>
+</div>
+<p>1.1. Выбор «источника данных» – на этом шаге задается <strong>географическая область на карте</strong> и <strong>источник данных / файл с изображением</strong>, по которым должна быть осуществелна обработка.</p>
+<div class="admonition hint">
+<p class="admonition-title">Подсказка</p>
+<p>Используйте GeoJSON - это очень удобный формат для обмена геоданными и отображения их на Web картах</p>
+</div>
+<p>Пример облаасти обработки в формате GeoJSON</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Polygon&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">[</span>
+      <span class="p">[</span>
+        <span class="mf">37.490057513654946</span><span class="p">,</span>
+        <span class="mf">55.923029653520395</span>
+      <span class="p">],</span>
+      <span class="p">[</span>
+        <span class="mf">37.490057513654946</span><span class="p">,</span>
+        <span class="mf">55.949815087874605</span>
+      <span class="p">],</span>
+      <span class="p">[</span>
+        <span class="mf">37.54308202484029</span><span class="p">,</span>
+        <span class="mf">55.949815087874605</span>
+      <span class="p">],</span>
+      <span class="p">[</span>
+        <span class="mf">37.54308202484029</span><span class="p">,</span>
+        <span class="mf">55.923029653520395</span>
+      <span class="p">],</span>
+      <span class="p">[</span>
+        <span class="mf">37.490057513654946</span><span class="p">,</span>
+        <span class="mf">55.923029653520395</span>
+      <span class="p">]</span>
+    <span class="p">]</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Скачайте</span> <span class="pre">GeoJSON</span></code>.</p>
+<p>1.2. Платформа Mapflow получает данные ДЗЗ из глобальных источников, включая коммерческих провайдеров спутниковой съемки. Также возможно загружать свои собственные данные ДЗЗ для обработки.</p>
+<blockquote>
+<div><div class="admonition important">
+<p class="admonition-title">Важно</p>
+<ul class="simple">
+<li><p>В бета версии Mapflow Web доступен только дефолтный источник (<strong>Mapbox Satellite</strong>). Отправьте нам запрос на использование функционала API (см <strong>API DOC</strong>) если хотите задавать другие истиочники обработки или загружать файлы в формате GeoTIFF</p></li>
+</ul>
+</div>
+</div></blockquote>
+<div class="figure align-center" id="ui-mapflow-define-aoi">
+<a class="reference internal image-reference" href="../_images/ui_map_select_source.png"><img alt="../_images/ui_map_select_source.png" src="../_images/ui_map_select_source.png" style="width: 20cm;" /></a>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Выбоерите одну из <strong>Моделей обработки</strong> (<a class="reference internal" href="pipelines.html"><span class="doc">См описание моделей</span></a>)</p></li>
+</ol>
+<p>2.1. Выберите дополнительные параметры обработки (e.g. «Классификация» по типам зданий и «Высоты» для модели «Здания»)</p>
+<blockquote>
+<div><div class="admonition important">
+<p class="admonition-title">Важно</p>
+<p>Опция обработки зданий с высотами доступна с ограничением по минимальной области обработки (от ~70 кв.км)</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Запустите процессинг и дождитесь результата ☕ 🙂</p></li>
+</ol>
+<blockquote>
+<div><div class="admonition caution">
+<p class="admonition-title">Осторожно</p>
+<p>После выбора всех параметров процессинга - отображается общий скоринг стоимости обработки</p>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h3>Работа с результатами обработки<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Результаты обработки сохраняются в планели «История обработок».
+При открытии карточки процессинга – отображается его статус, а также подсвечиваются выбранные параметры обработки, в основном окне.</p>
+<blockquote>
+<div><div class="admonition important">
+<p class="admonition-title">Важно</p>
+<p>При повтороном запуске с теми же параметрами - запускается новая обработка.</p>
+</div>
+</div></blockquote>
+<p>После окончания процессинга, вы можете посмотреть результаты на интерактивной карте или скачать в виде векторных геоданных (GeoJSON).</p>
+<div class="figure align-center" id="preview-results">
+<a class="reference internal image-reference" href="../_images/preview_button.png"><img alt="../_images/preview_button.png" src="../_images/preview_button.png" style="width: 10cm;" /></a>
+</div>
+<ol class="arabic simple">
+<li><p>«Посмотреть на карте» показывает результат обработки поверх исходного изображения. Это самый быстрый способ посмотреть результаты.</p></li>
+</ol>
+<div class="figure align-center" id="preview-map">
+<a class="reference internal image-reference" href="../_images/preview_map.png"><img alt="../_images/preview_map.png" src="../_images/preview_map.png" style="width: 20cm;" /></a>
+</div>
+<ol class="arabic simple">
+<li><p>Скачать <strong>GeoJSON</strong> - формат геоданных, который нативно поддерживается Web-Map библиотеками, такими как <strong>Leaflet</strong> (<a class="reference external" href="https://leafletjs.com/">https://leafletjs.com/</a>) или ГИС такими как <strong>QGIS</strong> (<a class="reference external" href="https://qgis.org/">https://qgis.org/</a>).</p></li>
+<li><p>«Открыть в geojson.io» - просмотр результатов во внешнем приложении с помощью прямой ссылки из Mapflow - пример: <a class="reference external" href="http://geojson.io/#data=data:application/json,%7B%22type%22%3A%20%22Polygon%22%2C%20%22coordinates%22%3A%20%5B%20%5B%20%5B%2037.490057513654946%2C%2055.923029653520395%20%5D%2C%20%5B%2037.490057513654946%2C%2055.949815087874605%20%5D%2C%20%5B%2037.543082024840288%2C%2055.949815087874605%20%5D%2C%20%5B%2037.543082024840288%2C%2055.923029653520395%20%5D%2C%20%5B%2037.490057513654946%2C%2055.923029653520395%20%5D%20%5D%20%5D%7D">geosjon.io</a></p></li>
+</ol>
+<p>Это еще один встроенный способ посмотреть результаты и сохранить в других форматах (CSV, KML, GeoJSON, TopoJSON, WKT, Shapefile). Неплохо?! 🙂</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/geojson.io.png"><img alt="../_images/geojson.io.png" src="../_images/geojson.io.png" style="width: 20cm;" /></a>
+</div>
+</div>
+<div class="section" id="api">
+<h3>Работа с API<a class="headerlink" href="#api" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Mapflow предоставляет сервис Rest API, чтобы запускать обработки и получать результаты из внешних приложений.
+Если вы разрабатываете приложение и хотите использовать API - посмотрите <a class="reference internal" href="../docs_api/processing_api.html"><span class="doc">Mapflow API</span></a> и свяжитесь с нами (<a class="reference external" href="mailto:help&#37;&#52;&#48;geoalert&#46;io">help<span>&#64;</span>geoalert<span>&#46;</span>io</a>).</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+        <p>Contact us at <a href=mailto:help@geoalert.io>help@geoalert.io</a> and on:</p>
+        <p>
+            <a href="https://twitter.com/geoalertinc"><img style="width: 30px; height: 30px; margin-right: 20px" src="../_static/social/Twitter_Social_Icon_Circle_Color.svg" alt="twitter"></a>
+            <a href="https://www.facebook.com/GeoAlertLtd/"><img style="width: 30px; height: 30px; margin-right: 20px" src="../_static/social/f_logo_RGB-Blue_58.png" alt="facebook"></a>
+            <a href="https://medium.com/geoalert-platform-urban-monitoring"><img style="width: 30px; height: 30px;" src="../_static/social/Medium_Monogram.svg" alt="medium"></a>
+        </p>
+    
+    <p>
+        
+        &copy; Авторские права 2020, Geoalert
+    </p>
+  </div>
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book">  <a href="https://docs.mapflow.ai/ru/">RU</a></span>
+      <a href="https://geoalert.io">Geoalert.io</a>
+    </span>
+
+  </div>
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

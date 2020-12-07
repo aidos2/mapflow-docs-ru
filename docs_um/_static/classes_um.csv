@@ -1,0 +1,14 @@
+CLASS_ID,CLASS NAME,DESCRIPTION,OSM refereral tag
+101,Apartment building ,Roof footprints of the multistorey apartment buildings,"building=yes
+building=residential
+building=appartments"
+102,House,Mostly private houses (usually represents a single household),"building=house
+building=residential"
+103,Industrial building,"Mostly industrial (Plants, large hangars, warehouses, etc.)",building=industrial
+104,Commercial building,"Offices, retail, etc.",building=commercial
+105,Other non-residential buildings,"Garages, transformer boxes, small hangars, etc.",
+106,Construction site,,landuse=construction
+107,Constructing building,Construction is in progress,building=construction
+110,Religious buildings,,building=religious
+111,Apartment block,"Merged buildings in high density construction areas, apartment blocks",
+112,Civic building,"Civic buildings, public places like hospitals, government, schools etc.",building=civic

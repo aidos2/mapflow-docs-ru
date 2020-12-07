@@ -1,0 +1,4 @@
+KEY,VALUE,MODEL input resolution (m/px)
+wdName,Buildings Detection,0.5
+wdName,Forest Detection,1.5
+wdName,Roads Detection,0.5

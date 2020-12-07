@@ -1,0 +1,5 @@
+CLASS PARAMS / KEY,VALUE,Description
+source_type,XYZ,"The URI to the imagery service in ""XYZ"" format, e.g. ""https://tile.openstreetmap.org/{z}/{x}/{y}.png"""
+source_type,TMS,The similar to XYZ with reverse Y coordinate
+source_type,WMS,"The URI to the imagery service in ""WMS"" format, e.g. ""https://services.nationalmap.gov/arcgis/services/USGSNAIPImagery/ImageServer/WMSServer"""
+source_type,TIF,Single image in GeoTIFF format

@@ -1,0 +1,5 @@
+KEY,VALUE,Description
+status,UNPROCESSED,The processing is not started yet
+status,IN_PROGRESS,The processing is going (or is in the queu)
+status,FAILED,The processing ended unsuccessfuly - change wrong params or try to restart
+status,OK,The processing is finished at 100 percent completed 

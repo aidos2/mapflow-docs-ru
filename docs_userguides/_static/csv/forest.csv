@@ -1,0 +1,3 @@
+Forest,Description,"Model input, min. GSD m/px"
+Segmentation,Extract segmentation masks of forested areas from high-resolution RGB images,"RGB, 2"
+Classification,"Classify the areas of vegetation and shrub vegetation by height classes according to the specified thresholds: by default 0-4 m, 4-10 m, 10+ m. Forest areas of each height class are polygonized in separate features, the height class is indicated in its properties","RGB, 2"

@@ -1,0 +1,20 @@
+stages:
+- build_doc
+
+pages:
+  image: python:3.8.5-alpine3.12
+  stage: build_doc
+  script:
+  - pip install Sphinx sphinx_rtd_theme
+  - pip install sphinxemoji
+  - apk add --no-cache make
+  - make html
+  - mkdir public/ || true
+  - cp -a _build/html/* public/
+  tags:
+  - docker
+  artifacts:
+    paths:
+    - public
+  rules:
+  - if: $CI_COMMIT_BRANCH == "master"
