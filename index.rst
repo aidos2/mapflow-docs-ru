@@ -12,7 +12,7 @@
 Временная документация
 ----------------------
  
-https://geoalert-projects.gitlab.io/docs/
+https://geoalert-projects.gitlab.io/docs_ru/
 
 
 ************************************
