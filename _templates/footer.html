@@ -2,10 +2,10 @@
   {% if next or prev %}
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       {% if next %}
-        <a href="{{ next.link|e }}" class="btn btn-neutral float-right" title="{{ next.title|striptags|e }}">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="{{ next.link|e }}" class="btn btn-neutral float-right" title="{{ next.title|striptags|e }}">Следующая <span class="fa fa-arrow-circle-right"></span></a>
       {% endif %}
       {% if prev %}
-        <a href="{{ prev.link|e }}" class="btn btn-neutral" title="{{ prev.title|striptags|e }}"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="{{ prev.link|e }}" class="btn btn-neutral" title="{{ prev.title|striptags|e }}"><span class="fa fa-arrow-circle-left"></span> Предыдущая</a>
       {% endif %}
     </div>
   {% endif %}
@@ -14,7 +14,7 @@
 
   <div role="contentinfo">
     {%- block extrafooter %}
-        <p>Contact us at <a href=mailto:help@geoalert.io>help@geoalert.io</a> and on:</p>
+        <p>Наши контакты <a href=mailto:help@geoalert.io>help@geoalert.io</a>, а также:</p>
         <p>
             <a href="https://twitter.com/geoalertinc"><img style="width: 30px; height: 30px; margin-right: 20px" src="{{ pathto('_static/social/Twitter_Social_Icon_Circle_Color.svg', 1) }}" alt="twitter"></a>
             <a href="https://www.facebook.com/GeoAlertLtd/"><img style="width: 30px; height: 30px; margin-right: 20px" src="{{ pathto('_static/social/f_logo_RGB-Blue_58.png', 1) }}" alt="facebook"></a>

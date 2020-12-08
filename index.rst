@@ -8,18 +8,14 @@
    :glob:
    :maxdepth: 3
 
-----------------------
-Временная документация
-----------------------
- 
-https://geoalert-projects.gitlab.io/docs_ru/
-
+   
 
 ************************************
-Mapflow – пользовательский интерфейс
+Mapflow – начало работы
 ************************************
 
-* :doc:`Начало работы <docs_userguides/get_started>`
+#. :doc:`Пользовательский интерфейс <docs_userguides/get_started>`
+#. :doc:`Тарифы <docs_userguides/prices>`
 
 
 *****************
@@ -45,10 +41,9 @@ Urban Mapping – городское картирование
 PDFs
 ******************
 
-* :download:`Mapflow User Guide`
-* :download:`Mapflow Data processing`
-* :download:`Urban Mapping`
-
+* :download:`Mapflow User Guide <docs_userguides/_static/_downloads/get_started.pdf>`
+* :download:`Mapflow Data pipelines <docs_userguides/_static/_downloads/pipelines.pdf>`
+* :download:`Mapflow tariffs <docs_userguides/_static/_downloads/prices.pdf>`
 
 
 .. only:: html

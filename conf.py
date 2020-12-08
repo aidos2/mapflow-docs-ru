@@ -39,8 +39,13 @@ release = '0.1'
 # ones.
 extensions = [
   'edit_on_github',
-  'sphinxemoji.sphinxemoji'
+  'sphinxemoji.sphinxemoji',
+  'rst2pdf.pdfbuilder'
 ]
+
+source_encoding = 'utf-8-sig'
+
+pdf_documents = [('docs_userguides/get_started', u'get_started', u'Getting Started with Mapflow UI', u'Geoalert'),('docs_userguides/pipelines', u'pipelines', u'Mapping models pipelines', u'Geoalert'),('docs_userguides/prices', u'prices', u'Mapflow tariffs', u'Geoalert')]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
