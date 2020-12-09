@@ -88,4 +88,4 @@ html_static_path = ['_static']
 
 # -- Options for Edit on github ----------------------------------------------
 edit_on_gitlab_user = ''
-edit_on_github_branch = 'master'
+edit_on_github_branch = 'main'
