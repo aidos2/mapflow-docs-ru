@@ -6257,7 +6257,7 @@ html {
   overflow-y: hidden;
   min-height: 100%;
   color: #9b9b9b;
-  background: #5a67d8;
+  background: #313a7e;
   z-index: 200
 }
 
@@ -6489,7 +6489,7 @@ footer span.commit .rst-content tt,
 }
 
 .rst-versions a {
-  color: #5a67d8;
+  color: #fff;
   text-decoration: none
 }
 
@@ -6499,12 +6499,12 @@ footer span.commit .rst-content tt,
 
 .rst-versions .rst-current-version {
   padding: 12px;
-  background-color: #363f94;
+  background-color: #5a67d8;
   display: block;
   text-align: right;
   font-size: 90%;
   cursor: pointer;
-  color: #27AE60;
+  color: white;
   *zoom: 1
 }
 
