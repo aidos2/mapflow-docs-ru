@@ -9,10 +9,10 @@
 
 Информация по тарифам на обработку представлена в таблице:
 
-   .. tabularcolumns:: |p{7cm}|p{4cm}|p{2cm}|p{2cm}|p{2cm}|
+   .. tabularcolumns:: |p{7cm}|p{2cm}|p{2cm}|p{2cm}|
 
    .. csv-table::
       :file: _static/csv/credits_12.20.csv 
       :header-rows: 1 
       :class: longtable
-      :widths: 1 1 1 1 1
+      :widths: 1 1 1 1
