@@ -23,7 +23,7 @@
 Mapflow – начало работы
 ************************************
 
-#. :doc:`Пользовательский интерфейс <docs_userguides/get_started>`
+#. :doc:`Пользовательский интерфейс <docs_userguides/get_started>` |:diamonds:|
 #. :doc:`Тарифы <docs_userguides/prices>`
 
 

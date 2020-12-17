@@ -86,6 +86,12 @@ html_logo = '_static/logo_mapflow.svg'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_context = {
+    'css_files': [
+        '_static/theme_overrides.css',  # override wide tables in RTD theme
+        ],
+     }
+
 # -- Options for Edit on github ----------------------------------------------
 edit_on_gitlab_user = ''
 edit_on_github_branch = 'main'
