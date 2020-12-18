@@ -42,7 +42,7 @@
 Здания
 """""""""
 
-   .. tabularcolumns:: |p{2cm}|p{5cm}|p{3cm}|
+   .. tabularcolumns:: |p{3cm}|p{5cm}|p{3cm}|
 
    .. csv-table::
       :file: _static/csv/buildings.csv 
@@ -54,7 +54,7 @@
 Лес
 """"""
 
-   .. tabularcolumns:: |p{2cm}|p{3cm}|p{3cm}|
+   .. tabularcolumns:: |p{3cm}|p{5cm}|p{3cm}|
 
    .. csv-table::
       :file: _static/csv/forest.csv 
@@ -66,7 +66,7 @@
 Дороги
 """"""
 
-   .. tabularcolumns:: |p{5cm}|p{7cm}|p{7cm}|
+   .. tabularcolumns:: |p{3cm}|p{5cm}|p{3cm}|
 
    .. csv-table::
       :file: _static/csv/roads.csv 
