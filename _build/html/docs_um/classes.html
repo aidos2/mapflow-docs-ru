@@ -140,63 +140,85 @@
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>CLASS_ID</p></th>
-<th class="head"><p>CLASS NAME</p></th>
-<th class="head"><p>DESCRIPTION</p></th>
-<th class="head"><p>OSM refereral tag</p></th>
+<th class="head"><p>Класс (рус)</p></th>
+<th class="head"><p>Описание рус</p></th>
+<th class="head"><p>OSM тэг</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>101</p></td>
-<td><p>Apartment building</p></td>
-<td><p>Roof footprints of the multistorey apartment buildings</p></td>
-<td><p>building=yes
-building=residential
-building=appartments</p></td>
+<tr class="row-even"><td><p>Buildings and Construction</p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>102</p></td>
-<td><p>House</p></td>
-<td><p>Mostly private houses (usually represents a single household)</p></td>
-<td><p>building=house
+<tr class="row-odd"><td><p>101</p></td>
+<td><p>Многоквартиное жилое здание</p></td>
+<td><p>Жилые многоквартирные здания в разных типах застройки.</p></td>
+<td><p>building=yes,
+building=residential,
+building=appartments,</p></td>
+</tr>
+<tr class="row-even"><td><p>901</p></td>
+<td><p>Тень здания</p></td>
+<td><p>Тень от зданий</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>902</p></td>
+<td><p>Стена здания</p></td>
+<td><p>Стены зданий</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>102</p></td>
+<td><p>Частный дом</p></td>
+<td><p>Малоэтажная застройка. Не принципиальна высота зданий</p></td>
+<td><p>building=house,
 building=residential</p></td>
 </tr>
-<tr class="row-even"><td><p>103</p></td>
-<td><p>Industrial building</p></td>
-<td><p>Mostly industrial (Plants, large hangars, warehouses, etc.)</p></td>
+<tr class="row-odd"><td><p>103</p></td>
+<td><p>Промышленное здание</p></td>
+<td><p>Промышленные здания.
+Заводы, порты и т.д. характерные наличием промышленной инфраструктуры.</p></td>
 <td><p>building=industrial</p></td>
 </tr>
-<tr class="row-odd"><td><p>104</p></td>
-<td><p>Commercial building</p></td>
-<td><p>Offices, retail, etc.</p></td>
+<tr class="row-even"><td><p>104</p></td>
+<td><p>Коммерческое здание</p></td>
+<td><p>Офисные помещения, бизнес-центры, торговые центры.
+Характерны наличием парковок в офисные часы</p></td>
 <td><p>building=commercial</p></td>
 </tr>
-<tr class="row-even"><td><p>105</p></td>
-<td><p>Other non-residential buildings</p></td>
-<td><p>Garages, transformer boxes, small hangars, etc.</p></td>
+<tr class="row-odd"><td><p>105</p></td>
+<td><p>Прочие нежилые здания</p></td>
+<td><p>Прочие здания. Не попало ни в один из вышеперечисленных классов, предположительно является нежилым типом</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>106</p></td>
-<td><p>Construction site</p></td>
-<td></td>
+<tr class="row-even"><td><p>106</p></td>
+<td><p>Строительная площадка</p></td>
+<td><p>Строй площадка, строительный полигон</p></td>
 <td><p>landuse=construction</p></td>
 </tr>
-<tr class="row-even"><td><p>107</p></td>
-<td><p>Constructing building</p></td>
-<td><p>Construction is in progress</p></td>
+<tr class="row-odd"><td><p>107</p></td>
+<td><p>Строящееся здание</p></td>
+<td><p>Строящееся здание</p></td>
 <td><p>building=construction</p></td>
 </tr>
+<tr class="row-even"><td><p>108</p></td>
+<td><p>Котлован</p></td>
+<td><p>Строительный котлован либо карьер</p></td>
+<td></td>
+</tr>
 <tr class="row-odd"><td><p>110</p></td>
-<td><p>Religious buildings</p></td>
+<td><p>Культовые сооружения</p></td>
 <td></td>
 <td><p>building=religious</p></td>
 </tr>
 <tr class="row-even"><td><p>111</p></td>
-<td><p>Apartment block</p></td>
-<td><p>Merged buildings in high density construction areas, apartment blocks</p></td>
+<td><p>Блокированная застройка, кварталы террасного типа, плотно прилегающие строения без просветов</p></td>
+<td><p>Не характерно для РФ.</p></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>112</p></td>
-<td><p>Civic building</p></td>
-<td><p>Civic buildings, public places like hospitals, government, schools etc.</p></td>
+<td><p>Административное здание, общественные места</p></td>
+<td><p>Больницы, школы, дет. сады и т.д.</p></td>
 <td><p>building=civic</p></td>
 </tr>
 </tbody>
@@ -237,7 +259,7 @@ building=residential</p></td>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book">  <a href="https://docs.mapflow.ai/">EN</a></span>
-      <a href="https://geoalert.io">Geoalert.io</a>
+      <a href="https://mapflow.ai">Mapflow.ai</a>
     </span>
 
   </div>
