@@ -38,7 +38,8 @@ Mapflow – начало работы
 Справочные материалы
 **********************
 
-* :doc:`Urban Mapping – классификация <docs_um/classes>`
+* :doc:`Urban Mapping – классификация городской застройки <docs_um/classes>`
+* :doc:`Forest Mapping – классификация растительности <docs_forest/classes>`
 
 ******************
 PDFs
