@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Начало работы &mdash; документация Mapflow 0.1</title>
+  <title>Пользовательский интерфейс web-приложения Mapflow &mdash; документация Mapflow 0.1</title>
   
 
   
@@ -85,13 +85,10 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Начало работы</a><ul>
-<li><a class="reference internal" href="#mapflow-web">Mapflow – Web-приложение</a><ul>
-<li><a class="reference internal" href="#id2">Как запускать обработку</a></li>
-<li><a class="reference internal" href="#id3">Работа с результатами обработки</a></li>
+<li><a class="reference internal" href="#">Пользовательский интерфейс web-приложения Mapflow</a><ul>
+<li><a class="reference internal" href="#id1">Как запускать обработку</a></li>
+<li><a class="reference internal" href="#id2">Работа с результатами обработки</a></li>
 <li><a class="reference internal" href="#api">Работа с API</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -121,7 +118,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Начало</a> &raquo;</li>
       
-    <li>Начало работы</li>
+    <li>Пользовательский интерфейс web-приложения Mapflow</li>
       <li class="wy-breadcrumbs-aside">
     <ul class="this-page-menu">
         <li><a href="https://github.com/Geoalert/mapflow-docs-ru/edit/main/docs_userguides/get_started.rst"
@@ -134,25 +131,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>Начало работы<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
-<div class="section" id="mapflow-web">
-<h2>Mapflow – Web-приложение<a class="headerlink" href="#mapflow-web" title="Ссылка на этот заголовок">¶</a></h2>
-<p>1.0. Откройте web-приложение пройдя по ссылке <a class="reference external" href="https://app.mapflow.ai">https://app.mapflow.ai</a>.</p>
+  <div class="section" id="web-mapflow">
+<h1>Пользовательский интерфейс web-приложения Mapflow<a class="headerlink" href="#web-mapflow" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Откройте web-приложение пройдя по ссылке <a class="reference external" href="https://app.mapflow.ai">https://app.mapflow.ai</a>.</p>
 <p>Зарегистрируйтесь или войдите используя свой Google аккаунт.</p>
-<div class="section" id="id2">
-<h3>Как запускать обработку<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Пользоваться платформой очень просто.
-Ниже отражен пошаговый процесс запуска обработки:</p>
-<div class="figure align-center" id="ui-mapflow-run-flow">
-<a class="reference internal image-reference" href="../_images/ui_flow_basic.png"><img alt="../_images/ui_flow_basic.png" src="../_images/ui_flow_basic.png" style="width: 15cm;" /></a>
+<div class="section" id="id1">
+<h2>Как запускать обработку<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Пользоваться платформой очень просто. Ниже отражен и описан пошаговый процесс запуска обработки:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/ui_flow_basic.png"><img alt="UI Mapflow – run flow" src="../_images/ui_flow_basic.png" style="width: 15cm;" /></a>
 </div>
-<p>1.1. Выбор «источника данных» – на этом шаге задается <strong>географическая область на карте</strong> и <strong>источник данных / файл с изображением</strong>, по которым должна быть осуществлена обработка.</p>
-<div class="admonition hint">
-<p class="admonition-title">Подсказка</p>
-<p>Используйте GeoJSON - это очень удобный формат для обмена геоданными и отображения их на Web картах</p>
+<ol class="arabic">
+<li><p>Источник данных</p>
+<p>1.1. Ресурсы Mapflow</p>
+<p>Платформа Mapflow получает данные ДЗЗ из глобальных источников, включая коммерческих провайдеров спутниковой съемки. На этом шаге вы можете воспользоваться этими возможностями и задать <strong>географическую область на карте</strong> и <strong>источник данных / файл с изображением</strong>, по которым должна быть осуществлена обработка.</p>
+</li>
+</ol>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/ui_map_select_source.png"><img alt="UI Mapflow – define AOI" src="../_images/ui_map_select_source.png" style="width: 15cm;" /></a>
 </div>
-<p>Пример области обработки в формате GeoJSON</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Используйте GeoJSON - это очень удобный формат для обмена геоданными и отображения их на web-картах.</p>
+</div>
+<p>Пример области обработки в формате GeoJSON:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Polygon&quot;</span><span class="p">,</span>
   <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -183,62 +185,69 @@
 </pre></div>
 </div>
 <p><a class="reference download internal" download="" href="../_downloads/c427956472fef5645726a978c5763d83/buildings_aoi.geojson"><code class="xref download docutils literal notranslate"><span class="pre">Скачайте</span> <span class="pre">GeoJSON</span></code></a></p>
-<p>1.2. Платформа Mapflow получает данные ДЗЗ из глобальных источников, включая коммерческих провайдеров спутниковой съемки. Также возможно загружать свои собственные данные ДЗЗ для обработки.</p>
+<blockquote>
+<div><p>1.2. Обработка своих данных</p>
+<p>Также возможно загружать свои собственные данные ДЗЗ для обработки.</p>
+</div></blockquote>
 <div class="admonition important">
 <p class="admonition-title">Важно</p>
-<p>В бета версии Mapflow Web доступен только дефолтный источник (<strong>Mapbox Satellite</strong>). Отправьте нам запрос на использование функционала API (см <strong>API DOC</strong>) если хотите задавать другие источники обработки или загружать файлы в формате GeoTIFF</p>
-</div>
-<div class="figure align-center" id="ui-mapflow-define-aoi">
-<a class="reference internal image-reference" href="../_images/ui_map_select_source.png"><img alt="../_images/ui_map_select_source.png" src="../_images/ui_map_select_source.png" style="width: 20cm;" /></a>
+<p>В бета версии Mapflow доступен только дефолтный источник (<strong>Mapbox Satellite</strong>). Отправьте нам запрос на использование функционала API (см <strong>API DOC</strong>) если хотите задавать другие источники обработки или загружать файлы в формате GeoTIFF.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>Выберите одну из <strong>Моделей обработки</strong> (<a class="reference internal" href="pipelines.html"><span class="doc">См описание моделей</span></a>)</p></li>
+<li><p>AI модель</p></li>
 </ol>
-<p>2.1. Выберите дополнительные параметры обработки (e.g. «Классификация» по типам зданий и «Высоты» для модели «Здания»)</p>
+<p>Выберите одну из Моделей обработки (<a class="reference internal" href="pipelines.html"><span class="doc">См описание моделей</span></a>).</p>
+<ol class="arabic simple" start="3">
+<li><p>Пост-обработка</p></li>
+</ol>
+<p>На данном шаге ресурсы Mapflow позволяют выбрать дополнительные параметры обработки (e.g. «Классификация» по типам зданий и «Высоты» для модели «Здания»)</p>
 <div class="admonition important">
 <p class="admonition-title">Важно</p>
-<p>Опция обработки зданий с высотами доступна с ограничением по минимальной области обработки (от 50 кв.км)</p>
+<p>Опция обработки зданий с высотами доступна с ограничением по минимальной области обработки (от 50 кв.км).</p>
 </div>
-<ol class="arabic simple" start="3">
-<li><p>Запустите процессинг и дождитесь результата ☕ 🙂</p></li>
+<ol class="arabic simple" start="4">
+<li><p>Запуск обработки</p></li>
 </ol>
-<div class="admonition caution">
-<p class="admonition-title">Осторожно</p>
-<p>После выбора всех параметров процессинга - отображается общий скоринг стоимости обработки</p>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>После выбора всех параметров обработки отображается общая стоимость для выбранных данных. У вас на счете имеется 500 credits, которые начисляются при регистрации для ознакомления с функционалом Mapflow (<a class="reference internal" href="prices.html"><span class="doc">См тарифный план</span></a>).</p>
 </div>
 </div>
-<div class="section" id="id3">
-<h3>Работа с результатами обработки<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="section" id="id2">
+<h2>Работа с результатами обработки<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Результаты обработки сохраняются в панели «История обработок».
-При открытии карточки процессинга – отображается его статус, а также подсвечиваются выбранные параметры обработки, в основном окне.</p>
+При открытии данной панели – отображается статус, а также подсвечиваются выбранные ранее параметры обработки, в основном окне.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/preview_button.png"><img alt="Preview results" src="../_images/preview_button.png" style="width: 7cm;" /></a>
+</div>
+<p>После окончания обработки, вы можете посмотреть результаты на интерактивной карте или скачать в виде векторных геоданных (GeoJSON).</p>
 <div class="admonition important">
 <p class="admonition-title">Важно</p>
 <p>При повторном запуске с теми же параметрами - запускается новая обработка.</p>
 </div>
-<p>После окончания процессинга, вы можете посмотреть результаты на интерактивной карте или скачать в виде векторных геоданных (GeoJSON).</p>
-<div class="figure align-center" id="preview-results">
-<a class="reference internal image-reference" href="../_images/preview_button.png"><img alt="../_images/preview_button.png" src="../_images/preview_button.png" style="width: 10cm;" /></a>
-</div>
+<p>Варианты отображения результатов обработки:</p>
 <ol class="arabic simple">
+<li><p>Скачать <strong>GeoJSON</strong> - формат геоданных, который нативно поддерживается библиотеками web-карт, такими как <strong>Leaflet</strong> (<a class="reference external" href="https://leafletjs.com/">https://leafletjs.com/</a>), или ГИС, такими как <strong>QGIS</strong> (<a class="reference external" href="https://qgis.org/">https://qgis.org/</a>).</p></li>
+<li><p>«Открыть в geojson.io» - просмотр результатов во внешнем приложении с помощью прямой ссылки из Mapflow - пример: <a class="reference external" href="http://geojson.io/#data=data:application/json,%7B%22type%22%3A%20%22Polygon%22%2C%20%22coordinates%22%3A%20%5B%20%5B%20%5B%2037.490057513654946%2C%2055.923029653520395%20%5D%2C%20%5B%2037.490057513654946%2C%2055.949815087874605%20%5D%2C%20%5B%2037.543082024840288%2C%2055.949815087874605%20%5D%2C%20%5B%2037.543082024840288%2C%2055.923029653520395%20%5D%2C%20%5B%2037.490057513654946%2C%2055.923029653520395%20%5D%20%5D%20%5D%7D">geosjon.io</a>.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Так же, перейдя ссылке <a class="reference external" href="http://geojson.io/#data=data:application/json,%7B%22type%22%3A%20%22Polygon%22%2C%20%22coordinates%22%3A%20%5B%20%5B%20%5B%2037.490057513654946%2C%2055.923029653520395%20%5D%2C%20%5B%2037.490057513654946%2C%2055.949815087874605%20%5D%2C%20%5B%2037.543082024840288%2C%2055.949815087874605%20%5D%2C%20%5B%2037.543082024840288%2C%2055.923029653520395%20%5D%2C%20%5B%2037.490057513654946%2C%2055.923029653520395%20%5D%20%5D%20%5D%7D">geosjon.io</a>, вам предоставляется возможность посмотреть результаты и сохранить их в других форматах (CSV, KML, GeoJSON, TopoJSON, WKT, Shapefile). Для этого в строке меню выберите Save и нужный вам формат.</p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/geojson.io.png"><img alt="Preview map" src="../_images/geojson.io.png" style="width: 15cm;" /></a>
+</div>
+<ol class="arabic simple" start="3">
 <li><p>«Посмотреть на карте» показывает результат обработки поверх исходного изображения. Это самый быстрый способ посмотреть результаты.</p></li>
 </ol>
-<div class="figure align-center" id="preview-map">
-<a class="reference internal image-reference" href="../_images/preview_map.png"><img alt="../_images/preview_map.png" src="../_images/preview_map.png" style="width: 20cm;" /></a>
-</div>
-<ol class="arabic simple">
-<li><p>Скачать <strong>GeoJSON</strong> - формат геоданных, который нативно поддерживается Web-Map библиотеками, такими как <strong>Leaflet</strong> (<a class="reference external" href="https://leafletjs.com/">https://leafletjs.com/</a>) или ГИС такими как <strong>QGIS</strong> (<a class="reference external" href="https://qgis.org/">https://qgis.org/</a>).</p></li>
-<li><p>«Открыть в geojson.io» - просмотр результатов во внешнем приложении с помощью прямой ссылки из Mapflow - пример: <a class="reference external" href="http://geojson.io/#data=data:application/json,%7B%22type%22%3A%20%22Polygon%22%2C%20%22coordinates%22%3A%20%5B%20%5B%20%5B%2037.490057513654946%2C%2055.923029653520395%20%5D%2C%20%5B%2037.490057513654946%2C%2055.949815087874605%20%5D%2C%20%5B%2037.543082024840288%2C%2055.949815087874605%20%5D%2C%20%5B%2037.543082024840288%2C%2055.923029653520395%20%5D%2C%20%5B%2037.490057513654946%2C%2055.923029653520395%20%5D%20%5D%20%5D%7D">geosjon.io</a></p></li>
-</ol>
-<p>Это еще один встроенный способ посмотреть результаты и сохранить в других форматах (CSV, KML, GeoJSON, TopoJSON, WKT, Shapefile). Неплохо?! 🙂</p>
-<div class="figure align-center" id="id4">
-<a class="reference internal image-reference" href="../_images/geojson.io.png"><img alt="../_images/geojson.io.png" src="../_images/geojson.io.png" style="width: 20cm;" /></a>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/preview_map.png"><img alt="Preview map" src="../_images/preview_map.png" style="width: 15cm;" /></a>
 </div>
 </div>
 <div class="section" id="api">
-<h3>Работа с API<a class="headerlink" href="#api" title="Ссылка на этот заголовок">¶</a></h3>
+<h2>Работа с API<a class="headerlink" href="#api" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Mapflow предоставляет сервис Rest API, чтобы запускать обработки и получать результаты из внешних приложений.
-Если вы разрабатываете приложение и хотите использовать API - посмотрите <a class="reference internal" href="../docs_api/processing_api.html"><span class="doc">Документацию API</span></a> и свяжитесь с нами</p>
-</div>
+Если вы разрабатываете приложение и хотите использовать API - посмотрите <a class="reference internal" href="../docs_api/processing_api.html"><span class="doc">Документацию API</span></a> и свяжитесь с нами.</p>
 </div>
 </div>
 
