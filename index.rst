@@ -1,5 +1,6 @@
 .. Geoalert documentation master file
 
+  
 *******************
 Добро пожаловать
 *******************
@@ -36,7 +37,6 @@ Mapflow – начало работы
 
    docs_api/processing_api
    docs_userguides/pipelines
-   
 
 **********************
 Справочные материалы
@@ -45,8 +45,9 @@ Mapflow – начало работы
 .. toctree::
    :glob:
    :maxdepth: 1
-   
+
    docs_um/classes
+   docs_forest/classes
 
 ******************
 PDFs
