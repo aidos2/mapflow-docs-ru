@@ -22,7 +22,7 @@ Mapflow – начало работы
 .. toctree::
    :glob:
    :maxdepth: 1
-   
+
    docs_userguides/get_started
    docs_userguides/prices
 
