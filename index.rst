@@ -1,10 +1,5 @@
 .. Geoalert documentation master file
 
-  
-.. toctree::
-   :glob:
-   :maxdepth: 3
-
 *******************
 Добро пожаловать
 *******************
@@ -23,22 +18,35 @@
 Mapflow – начало работы
 ************************************
 
-#. :doc:`Пользовательский интерфейс <docs_userguides/get_started>` |:diamonds:|
-#. :doc:`Тарифы <docs_userguides/prices>`
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   docs_userguides/get_started
+   docs_userguides/prices
 
 
 *****************
 Сервисы Mapflow
 *****************
 
-#. :doc:`Mapflow API <docs_api/processing_api>`
-#. :doc:`Модели семантического анализа данных <docs_userguides/pipelines>`
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   docs_api/processing_api
+   docs_userguides/pipelines
+   
 
 **********************
 Справочные материалы
 **********************
 
-* :doc:`Urban Mapping – классификация <docs_um/classes>`
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   
+   docs_um/classes
 
 ******************
 PDFs
