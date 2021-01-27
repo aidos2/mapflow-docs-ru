@@ -16,14 +16,14 @@ Projects
 Get project
 """""""""""
 
-``GET https://mapflow.ai/api/{projectId}`` 
+``GET https://api.mapflow.ai/{projectId}`` 
 
 Returns the project with the specified ID.  
 
 Response example:
 
 .. code:: json
-    
+
     {
         "id": "546d148f-19a1-40d8-8f16-d1e6dabfd204",
         "name": "test",
@@ -61,14 +61,14 @@ Get default (demo) project
 
 Default (demo) project is created for each authorized user after the first login.
 
-``GET https://mapflow.ai/api/projects/default`` 
+``GET https://api.mapflow.ai/projects/default`` 
 
 Returns the name and ID of the user's default project.  
 
 Get all projects
 """"""""""""""""
 
-``GET https://platform.geoalert.io/rest/projects`` 
+``GET https://api.mapflow.ai/rest/projects`` 
 
 Returns the list of all user's projects.  
 
@@ -76,7 +76,7 @@ Returns the list of all user's projects.
 Post project
 """"""""""""
 
-``POST https://mapflow.ai/api/projects/``
+``POST https://api.mapflow.ai/projects/``
 
 Creates a new project, and returns its immediate state.  
 
@@ -99,7 +99,7 @@ Response: the newly created project
 Delete project
 """"""""""""""
 
-``DELETE https://mapflow.ai/api/projects/{projectId}`` 
+``DELETE https://api.mapflow.ai/projects/{projectId}`` 
 
 Deletes the project. Cascade deletes any child entities.
 
@@ -109,7 +109,7 @@ Processings
 Get processing
 """"""""""""""
 
-``GET https://mapflow.ai/api/processings/{processingId}``
+``GET https://api.mapflow.ai/processings/{processingId}``
 
 Returns the processing with the specified id.  
 Response example:
@@ -159,14 +159,14 @@ Response example:
 Get all processings
 """""""""""""""""""
 
-``GET https://mapflow.ai/api/processings``
+``GET https://api.mapflow.ai/processings``
 
 Returns the list of this user's processings.  
 
 Post processing
 """""""""""""""
 
-``POST https://platform.geoalert.io/rest/processings``
+``POST https://api.mapflow.ai/rest/processings``
 
 Creates and runs a processing, and returns its immediate state  
 Request body example:
@@ -232,21 +232,21 @@ Response: the newly created processing
 Restart processing
 ^^^^^^^^^^^^^^^^^^
 
-``POST https://platform.geoalert.io/rest/processings/{processingId}/restart``  
+``POST https://api.mapflow.ai/rest/processings/{processingId}/restart``  
 
 Restarts failed partitions of this processing. Doesn't restart non-failed partitions. Each workflow is restarted from the first failed stage. Thus, the least possible amount of work is performed to try and bring the processing into successful state.
 
 Delete processing
 ^^^^^^^^^^^^^^^^^
 
-``DELETE https://platform.geoalert.io/rest/processings/{processingId}``
+``DELETE https://api.mapflow.ai/rest/processings/{processingId}``
 
 Deletes this processing. Cascade deletes any child entities.
 
 Get processing AOIs
 ^^^^^^^^^^^^^^^^^^^
 
-``GET https://platform.geoalert.io/rest/processings/{processingId}/aois``  
+``GET https://api.mapflow.ai/rest/processings/{processingId}/aois``  
 
 Returns a list of the defined geographical areas for processing in GeoJSON.  
 
@@ -298,7 +298,7 @@ Response example:
 Downloading processing results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-``GET https://platform.geoalert.io/rest/processings/{processingId}/result``
+``GET https://api.mapflow.ai/rest/processings/{processingId}/result``
 
 Returns geojson results of this processing as an octet stream. Should only be called on a successfully completed processing.
 
@@ -306,7 +306,7 @@ Returns geojson results of this processing as an octet stream. Should only be ca
 Upload GeoTIFF for processing
 -----------------------------
 
-``POST https://platform.geoalert.io/rest/rasters``
+``POST https://api.mapflow.ai/rest/rasters``
 
 Can be used to upload a raster for further processing. Returns URI to the uploaded raster. This URI can be referenced when starting a processing.  
 The request is a multipart request whith the only part "file" - which contains the raster.
@@ -315,7 +315,7 @@ Request example with ``cURL``:
     .. code:: bash
 
           curl -X POST \
-          https://mapflow.ai/api/rasters \
+          https://api.mapflow.ai/rasters \
           -H 'authorization: <Insert auth header value>' \
           -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
           -F file=@custom_raster.tif
