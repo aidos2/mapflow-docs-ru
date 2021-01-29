@@ -1,11 +1,13 @@
-Mapflow API
+Geoalert API
 ===========
 
+ .. attention::
+  This API is separate from Mapflow. The projects and processing that you create in Mapflow won't be available via the API and vice versa. Neither can your Mapflow credits be used to run processings via the API. To start using the API, please, send us a request to help@geoalert.io. 
 
 Authorization
 -------------
 
-The API uses ``Basic Auth`` authorization method. Valid login and password are to be used for every API call. The client should provide `Authorization` header.
+The API uses the ``Basic Auth`` authorization method, for details about how it works, click `<https://en.wikipedia.org/wiki/Basic_access_authentication> here`_.
 
 API Methods
 -----------
@@ -59,7 +61,7 @@ Response example:
 Get default (demo) project
 """"""""""""""""""""""""""
 
-Default (demo) project is created for each authorized user after the first login.
+Default (demo) project is created for each user upon registration.
 
 ``GET https://api.mapflow.ai/projects/default`` 
 
