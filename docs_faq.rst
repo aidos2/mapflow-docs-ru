@@ -1,4 +1,4 @@
-Mapflow FAQ
+FAQ
 ============
 
 Оплата
@@ -20,7 +20,7 @@ Mapflow FAQ
 
 **Какие спутниковые снимки вы используете? Какие у них разрешение, точность привязки и прочие характеристики?**
 
-    В настоящее время, в качестве исходных данных, мы поддерживаем только RGB или PAN снимки. По-умолчанию, Mapflow использует спутниковую мозаику `Mapbox Satellite <https://www.mapbox.com/maps/satellite>`_, которая преимущественно состоит из снимков **Vivid Basic** компании Maxar. Эти снимки имеют пространственное разрешение 0.5м, точность геопривязки около 3-5м и давность не более двух лет. Полный список технических характеристик можно найти `здесь <https://cdn1-originals.webdamdb.com/13264_94721902?cache=1596135643&response-content-disposition=inline;filename=10009-ds-imagerybasemaps-07-2020.pdf&response-content-type=application/pdf&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTMyNjRfOTQ3MjE5MDI~Y2FjaGU9MTU5NjEzNTY0MyZyZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPWlubGluZTtmaWxlbmFtZT0xMDAwOS1kcy1pbWFnZXJ5YmFzZW1hcHMtMDctMjAyMC5wZGYmcmVzcG9uc2UtY29udGVudC10eXBlPWFwcGxpY2F0aW9uL3BkZiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MjE0NzQxNDQwMH19fV19&Signature=UXBlDqy95IXlX6saByLkbIJs6E2kRhhCpGbgfZSzvZO69NmERBUUG2wWv1Ax4mC5kg7Zfet6hcIltSGE7qUiidd~gT8Cjo8RCcBp4IFoxZ8Hi8v3y3MCbGcRbwFugwA1-rfnG6bdGjtgIX1AuFKekobv1njziOw3IrihyBTytV9g7mQHELLYuSuHwuzBb~z2~uw1ySdDUjGUlFYMxxV5Ispg6pvhws98Yv~e31ARjwirUyUCDOCVko1Ch9~MoSbWEU-Zt8Iq~oPhSiWOOPL2Ihr~SxEsP4p4nKJNzdF8ShexLxXSxRaiMR2~3595LoIk9pO~XvRZm~VjSFDo~DKNOA__&Key-Pair-Id=APKAI2ASI2IOLRFF2RHA>`_.
+    В настоящее время, в качестве исходных данных, мы поддерживаем только RGB и PAN снимки. По-умолчанию, Mapflow использует спутниковую мозаику `Mapbox Satellite <https://www.mapbox.com/maps/satellite>`_, которая преимущественно состоит из снимков **Vivid Basic** компании Maxar. Эти снимки имеют пространственное разрешение 0.5м, точность геопривязки около 3-5м и давность не более двух лет. Полный список технических характеристик можно найти `здесь <https://cdn1-originals.webdamdb.com/13264_94721902?cache=1596135643&response-content-disposition=inline;filename=10009-ds-imagerybasemaps-07-2020.pdf&response-content-type=application/pdf&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTMyNjRfOTQ3MjE5MDI~Y2FjaGU9MTU5NjEzNTY0MyZyZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPWlubGluZTtmaWxlbmFtZT0xMDAwOS1kcy1pbWFnZXJ5YmFzZW1hcHMtMDctMjAyMC5wZGYmcmVzcG9uc2UtY29udGVudC10eXBlPWFwcGxpY2F0aW9uL3BkZiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MjE0NzQxNDQwMH19fV19&Signature=UXBlDqy95IXlX6saByLkbIJs6E2kRhhCpGbgfZSzvZO69NmERBUUG2wWv1Ax4mC5kg7Zfet6hcIltSGE7qUiidd~gT8Cjo8RCcBp4IFoxZ8Hi8v3y3MCbGcRbwFugwA1-rfnG6bdGjtgIX1AuFKekobv1njziOw3IrihyBTytV9g7mQHELLYuSuHwuzBb~z2~uw1ySdDUjGUlFYMxxV5Ispg6pvhws98Yv~e31ARjwirUyUCDOCVko1Ch9~MoSbWEU-Zt8Iq~oPhSiWOOPL2Ihr~SxEsP4p4nKJNzdF8ShexLxXSxRaiMR2~3595LoIk9pO~XvRZm~VjSFDo~DKNOA__&Key-Pair-Id=APKAI2ASI2IOLRFF2RHA>`_.
  
 **Могу ли я выбрать другую спутниковую мозаику, например Яндекс или Google?**
 
@@ -40,7 +40,7 @@ Mapflow FAQ
 
 **Могу ли я использовать не-RGB данные, например радарные данные?**
 
-    Нет, в настоящее время, в качестве исходных данных, мы не поддерживаем SAR снимки.
+    Нет, в настоящее время в качестве исходных данных мы не поддерживаем SAR снимки.
 
 Векторные данные
 ------------------
@@ -51,7 +51,7 @@ Mapflow FAQ
 
 **Можно ли загрузить область обработки из иного формата (не GeoJSON)?**
 
-    Нет, в настоящее время платформа поддерживает только **GeoJSON**. Вы можете воспользоваться geojson.io либо настольным приложением QGIS для преобразования вашего набора данных в GeoJSON.
+    Нет, в настоящее время платформа поддерживает только **GeoJSON**. Вы можете воспользоваться `geojson.io <https://geojson.io>`_ либо настольным приложением `QGIS <https://qgis.org>`_ для преобразования вашего набора данных в GeoJSON.
 
 **Можно ли обработать несколько областей в одной обработке?**
 
@@ -59,14 +59,14 @@ Mapflow FAQ
 
 **В результатах присутствуют пропуски / ложные контуры / неточности / ошибки в классификации и/или высотах. Почему?**
 
-    Снимки обрабатывает искусственный интеллект, поэтому могут возникать неточности. Мы постоянно совершенствуем наши модели и нейросеть, но 100% результата добиться можно только совмещая автоматическую обработку с последующей валидацией.. 
+    Снимки обрабатывает искусственный интеллект, поэтому могут возникать неточности. Мы постоянно совершенствуем наши модели и нейросеть, но 100% результата добиться можно только совмещая автоматическую обработку с последующей валидацией. 
 
 Проекты и обработки
 --------------------
 
 **Что такое “проект”? Должен ли я создавать каждую новую обработку в новом проекте?**
 
-    **Проект** позволяет собирать в себе все логически связанные обработки для более эффективного и быстрого поиска нужной вам. Это как папка на вашем компьютере. В одном проекте может быть множество обработок. 
+    **Проект** позволяет собирать в себе все логически связанные обработки для более эффективного и быстрого поиска той что нужна вам. Это как папка на вашем компьютере. В одном проекте может быть множество обработок. 
 
 **Сразу после регистрации у меня появился проект “Demo processings”. Что это и для чего?**
 
@@ -80,9 +80,9 @@ Mapflow FAQ
 
     Да, область обработки должна быть не менее 1 кв. км и не более 100 кв. км. Если вам нужно обработать большую площадь, вы можете разделить область обработки на несколько меньших областей, одна на файл, и запустить обработку для каждого.
 
-**Почему опции Высоты зданий и Высоты леса доступны только при обработке свыше 50 кв. км?**
+**Почему опции "Высоты зданий" и "Высоты леса" доступны только при обработке свыше 50 кв. км?**
 
-    Рассчет высот требует от нас дополнительных ресурсов. На данном этапе мы можем выполнять ограниченное число таких обработок. В будующем мы собираемся снизить это ограничение или полностью от него отказаться.
+    Рассчет высот требует от нас дополнительных ресурсов. На данном этапе мы можем выполнять ограниченное число таких обработок. В будущем мы собираемся снизить это ограничение или полностью от него отказаться.
 
 Поддержка и другие вопросы
 ---------------------------
@@ -93,11 +93,14 @@ Mapflow FAQ
 
 **Есть ли у вас API?**
 
-    `Да <https://ru.docs.mapflow.ai/docs_api/processing_api.html>`_.
+ Да, `Geoalert API <https://ru.docs.mapflow.ai/docs_api/processing_api.html>`_. 
+ 
+ .. important:: 
+    Mapflow - это веб-приложение **платформы Geoalert**. **Geoalert API** - это отдельный инструмент. Это означает, что для его использования нужно завести отдельную учетную запись, написав нам на help@geoalert.io. При использовании API проекты и обработки, которые вы создали в Mapflow, будут недоступны, и наоборот.     
 
 **Есть ли у вас интеграция с ГИС?**
 
-    Да, на данный момент плагин для открытой ГИС `QGIS <https://qgis.org/ru/site/forusers/download.html>`_ находится на итоговой стадии разработки. Как только он будет готов, вся информация о нем появится здесь, а также на сайте Mapflow.
+    Да, на данный момент плагин для открытой ГИС `QGIS <https://qgis.org/ru/site/forusers/download.html>`_ находится на итоговой стадии разработки. Как только он будет готов, вся информация о нем появится здесь, а также в Mapflow.
 
 **У меня другой вопрос, где я могу его задать?**
 
