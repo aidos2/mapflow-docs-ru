@@ -1,5 +1,5 @@
-Mapflow API
-===========
+Geoalert API
+==============
 
 
 Authorization
