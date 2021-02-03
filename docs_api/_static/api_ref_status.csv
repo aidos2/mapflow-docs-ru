@@ -1,5 +1,5 @@
-KEY,VALUE,Description
-status,UNPROCESSED,The processing is not started yet
-status,IN_PROGRESS,The processing is going (or is in the queu)
-status,FAILED,The processing ended unsuccessfuly - change wrong params or try to restart
-status,OK,The processing is finished at 100 percent completed 
+КЛЮЧ,ЗНАЧЕНИЕ,ОПИСАНИЕ
+status,UNPROCESSED,Обработка еще не началась
+status,IN_PROGRESS,обработка идет (или находится в очереди)
+status,FAILED,Обработка закончилась неудачно - измените неверные параметры или попробуйте перезапустить
+status,OK,Обработка завершена на 100 процентов

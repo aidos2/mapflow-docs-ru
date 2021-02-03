@@ -2,27 +2,27 @@ Geoalert API
 ==============
 
  .. attention::
-  This API is separate from Mapflow. The projects and processings that you create in Mapflow won't be available via the API and vice versa. Neither can your Mapflow credits be used to run processings via the API. To start using the API, please, send us a request to help@geoalert.io. 
+Данный API функционирует отдельно от Mapflow. Проекты и обработки, которые вы создаете в Mapflow, не будут доступны через API, и наоборот. Также ваши кредиты Mapflow нельзя использовать для выполнения обработки через API. Чтобы начать пользоваться API, отправьте нам запрос на help@geoalert.io.
 
-Authorization
--------------
-
-The API uses the ``Basic Auth`` authorization method, for details about how it works, click `here <https://en.wikipedia.org/wiki/Basic_access_authentication>`_.
-
-API Methods
+Авторизация
 -----------
 
-Projects
+API использует метод авторизации Basic Auth, ознакомиться с подробной информацией о нем вы сможете `здесь <https://en.wikipedia.org/wiki/Basic_access_authentication>`_.
+
+Методы API
+-----------
+
+Проекты
 --------
 
-Get project
+Получить проект
 """""""""""
 
 ``GET https://api.mapflow.ai/{projectId}`` 
 
-Returns the project with the specified ID.  
+Возвращает проект с указанным ID.   
 
-Response example:
+Пример ответа:
 
 .. code:: json
 
@@ -58,31 +58,31 @@ Response example:
     }
 
 
-Get default (demo) project
-""""""""""""""""""""""""""
+Поучить демо проект
+"""""""""""""""""""
 
-Default (demo) project is created for each user upon registration.
+При регистрации демонстрационный проект создается для каждого ользователя.
 
 ``GET https://api.mapflow.ai/projects/default`` 
 
-Returns the name and ID of the user's default project.  
+Возвращает имя и ID пользователя демонстрационного проекта.
 
-Get all projects
-""""""""""""""""
+Получить все проекты
+""""""""""""""""""""
 
 ``GET https://api.mapflow.ai/rest/projects`` 
 
-Returns the list of all user's projects.  
+Возвращает список всех проектов пользователя.  
 
 
-Post project
-""""""""""""
+Создать проект
+"""""""""""""""""""
 
 ``POST https://api.mapflow.ai/projects/``
 
-Creates a new project, and returns its immediate state.  
+Создает новый проект и возвращает его непосредственный статус.
 
-Request body example:
+Пример тела запроса:
 
 .. code:: json
 
@@ -93,28 +93,28 @@ Request body example:
 
 
 
-//Name of the project
-//Arbitrary description of this project. Optional
+//Указаны название проекта и его произвольное описание.
 
-Response: the newly created project
+Ответ: вновь созданный проект.
 
-Delete project
+Удалить проект
 """"""""""""""
 
 ``DELETE https://api.mapflow.ai/projects/{projectId}`` 
 
-Deletes the project. Cascade deletes any child entities.
+Удаляет проект. Каскад удаляет все дочерние объекты.
 
-Processings
+Обработки
 -----------
 
-Get processing
-""""""""""""""
+Получить обработку
+""""""""""""""""""
 
 ``GET https://api.mapflow.ai/processings/{processingId}``
 
-Returns the processing with the specified id.  
-Response example:
+Возвращает обработку с определенным ID.
+
+Пример ответа:
 
 .. code:: json
     {
@@ -158,20 +158,21 @@ Response example:
     }
 
 
-Get all processings
-"""""""""""""""""""
+Получить все обработки
+""""""""""""""""""""""
 
 ``GET https://api.mapflow.ai/processings``
 
-Returns the list of this user's processings.  
+Возвращает список всех обработок пользователя.
 
-Post processing
-"""""""""""""""
+Создать обработку
+"""""""""""""""""
 
 ``POST https://api.mapflow.ai/rest/processings``
 
-Creates and runs a processing, and returns its immediate state  
-Request body example:
+Создает и запускает обработку, а также возвращает ее непосредственное состояние.
+
+Пример тела запроса:
 
 .. code:: json
 
@@ -220,7 +221,7 @@ Request body example:
     }
 
 
-To process a user-provided raster (see `Upload GeoTIFF for processing` section), set parameters as follows:  
+Чтобы обработать растр, предоставленный пользователем (см. Раздел «Загрузка GeoTIFF» для обработки), установите следующие параметры: 
 
  .. code:: json
 
@@ -229,30 +230,30 @@ To process a user-provided raster (see `Upload GeoTIFF for processing` section),
             "url": "s3://mapflow-rasters/9764750d-6047-407e-a972-5ebd6844be8a/raster.tif"
         }
 
-Response: the newly created processing
+Ответ: вновь созданная обработка.
 
-Restart processing
-^^^^^^^^^^^^^^^^^^
+Перезапустить обработку
+^^^^^^^^^^^^^^^^^^^^^^^
 
 ``POST https://api.mapflow.ai/rest/processings/{processingId}/restart``  
 
-Restarts failed partitions of this processing. Doesn't restart non-failed partitions. Each workflow is restarted from the first failed stage. Thus, the least possible amount of work is performed to try and bring the processing into successful state.
+Перезапускает неудачные части обработки (не запускает удавшиеся части обработки). Каждый рабочая обработка перезапускается с первого неудачного этапа. Таким образом, выполняется минимально возможный объем работы, чтобы попытаться привести обработку к лучшему результату.
 
-Delete processing
+Удалить обработку
 ^^^^^^^^^^^^^^^^^
 
 ``DELETE https://api.mapflow.ai/rest/processings/{processingId}``
 
-Deletes this processing. Cascade deletes any child entities.
+Удаляет обработку. Каскад удаляет все дочерние объекты.
 
-Get processing AOIs
-^^^^^^^^^^^^^^^^^^^
+Получить обработку определенной области
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ``GET https://api.mapflow.ai/rest/processings/{processingId}/aois``  
 
-Returns a list of the defined geographical areas for processing in GeoJSON.  
+Возвращает список определенных географических областей для обработки в GeoJSON.  
 
-Response example:
+Пример ответа:
 
 
 .. code:: json
@@ -297,22 +298,23 @@ Response example:
     ]
 
 
-Downloading processing results
+Загрузить результаты обработки
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ``GET https://api.mapflow.ai/rest/processings/{processingId}/result``
 
-Returns geojson results of this processing as an octet stream. Should only be called on a successfully completed processing.
+Возвращает результаты обработки в .geojson в виде потока октетов. Следует вызывать только при успешно завершенной обработке.
 
 
-Upload GeoTIFF for processing
------------------------------
+Загрузить GeoTIFF для обработки
+-------------------------------
 
 ``POST https://api.mapflow.ai/rest/rasters``
 
-Can be used to upload a raster for further processing. Returns URI to the uploaded raster. This URI can be referenced when starting a processing.  
-The request is a multipart request whith the only part "file" - which contains the raster.
-Request example with ``cURL``:  
+Может использоваться для загрузки растра для дальнейшей обработки. Возвращает URI загруженного растра. На этот URI можно ссылаться при запуске обработки. Запрос представляет собой составной запрос, единственная часть которого «file» - содержит растр. 
+
+Пример запроса с cURL:
+  
 
     .. code:: bash
 
@@ -323,14 +325,13 @@ Request example with ``cURL``:
           -F file=@custom_raster.tif
 
 
-
-Response example:  
+Пример ответа:  
 
 ``{"uri": "s3://mapflow-rasters/9764750d-6047-407e-a972-5ebd6844be8a/raster.tif"}``
 
 
-API reference
--------------
+API справочник
+--------------
 
 wdName
 """"""
