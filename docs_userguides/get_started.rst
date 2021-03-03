@@ -83,6 +83,16 @@
   :align: center
   :width: 15cm
 
+4."Открыть в `kepler.gl <https://kepler.geoalert.io/>`_" - просмотр результатов при помощи веб-инструмента с открытым исходным кодом, разработанным в компании Uber. Это простой, но мощный инструмент, позволяющий отображать и исследовать наборы геоданных.
+
+ .. figure:: _static/kepler_gl.png
+  :alt: Preview map
+  :align: center
+  :width: 15cm
+
+ .. note:: 
+  Подробную информацию по использованию веб-инструмента kepler.gl вы можете найти в `руководстве пользователя <https://docs.kepler.gl/docs/user-guides/j-get-started>`_.
+
 Работа с API
 -------------
 
