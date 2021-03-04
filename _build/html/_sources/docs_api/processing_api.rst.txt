@@ -1,29 +1,31 @@
-Mapflow API
-===========
+Geoalert API
+==============
 
+ .. attention::
+    Данный API функционирует отдельно от Mapflow. Проекты и обработки, которые вы создаете в Mapflow, не будут доступны через API, и наоборот. Также ваши кредиты Mapflow нельзя использовать для выполнения обработки через API. Чтобы начать пользоваться API, отправьте нам запрос на help@geoalert.io.
 
-Authorization
--------------
-
-The API uses ``Basic Auth`` authorization method. Valid login and password are to be used for every API call. The client should provide `Authorization` header.
-
-API Methods
+Авторизация
 -----------
 
-Projects
+API использует метод авторизации Basic Auth, ознакомиться с подробной информацией о нем вы сможете `здесь <https://en.wikipedia.org/wiki/Basic_access_authentication>`_.
+
+Методы API
+-----------
+
+Проекты
 --------
 
-Get project
+Получить проект
 """""""""""
 
-``GET https://mapflow.ai/api/{projectId}`` 
+``GET https://api.mapflow.ai/{projectId}`` 
 
-Returns the project with the specified ID.  
+Возвращает проект с указанным ID.   
 
-Response example:
+Пример ответа:
 
 .. code:: json
-    
+
     {
         "id": "546d148f-19a1-40d8-8f16-d1e6dabfd204",
         "name": "test",
@@ -56,31 +58,31 @@ Response example:
     }
 
 
-Get default (demo) project
-""""""""""""""""""""""""""
+Поучить демо проект
+"""""""""""""""""""
 
-Default (demo) project is created for each authorized user after the first login.
+При регистрации демонстрационный проект создается для каждого пользователя.
 
-``GET https://mapflow.ai/api/projects/default`` 
+``GET https://api.mapflow.ai/projects/default`` 
 
-Returns the name and ID of the user's default project.  
+Возвращает имя и ID пользователя демонстрационного проекта.
 
-Get all projects
-""""""""""""""""
+Получить все проекты
+""""""""""""""""""""
 
-``GET https://platform.geoalert.io/rest/projects`` 
+``GET https://api.mapflow.ai/rest/projects`` 
 
-Returns the list of all user's projects.  
+Возвращает список всех проектов пользователя.  
 
 
-Post project
-""""""""""""
+Создать проект
+"""""""""""""""""""
 
-``POST https://mapflow.ai/api/projects/``
+``POST https://api.mapflow.ai/projects/``
 
-Creates a new project, and returns its immediate state.  
+Создает новый проект и возвращает его непосредственный статус.
 
-Request body example:
+Пример тела запроса:
 
 .. code:: json
 
@@ -91,30 +93,31 @@ Request body example:
 
 
 
-//Name of the project
-//Arbitrary description of this project. Optional
+//Указаны название проекта и его произвольное описание.
 
-Response: the newly created project
+Ответ: вновь созданный проект.
 
-Delete project
+Удалить проект
 """"""""""""""
 
-``DELETE https://mapflow.ai/api/projects/{projectId}`` 
+``DELETE https://api.mapflow.ai/projects/{projectId}`` 
 
-Deletes the project. Cascade deletes any child entities.
+Удаляет проект. Каскад удаляет все дочерние объекты.
 
-Processings
+Обработки
 -----------
 
-Get processing
-""""""""""""""
+Получить обработку
+""""""""""""""""""
 
-``GET https://mapflow.ai/api/processings/{processingId}``
+``GET https://api.mapflow.ai/processings/{processingId}``
 
-Returns the processing with the specified id.  
-Response example:
+Возвращает обработку с определенным ID.
+
+Пример ответа:
 
 .. code:: json
+    
     {
         "id": "b86127bb-38bc-43e7-9fa9-54b37a0e17af",
         "name": "Buildings Detection4",
@@ -156,20 +159,21 @@ Response example:
     }
 
 
-Get all processings
-"""""""""""""""""""
+Получить все обработки
+""""""""""""""""""""""
 
-``GET https://mapflow.ai/api/processings``
+``GET https://api.mapflow.ai/processings``
 
-Returns the list of this user's processings.  
+Возвращает список всех обработок пользователя.
 
-Post processing
-"""""""""""""""
+Создать обработку
+"""""""""""""""""
 
-``POST https://platform.geoalert.io/rest/processings``
+``POST https://api.mapflow.ai/rest/processings``
 
-Creates and runs a processing, and returns its immediate state  
-Request body example:
+Создает и запускает обработку, а также возвращает ее непосредственное состояние.
+
+Пример тела запроса:
 
 .. code:: json
 
@@ -218,7 +222,7 @@ Request body example:
     }
 
 
-To process a user-provided raster (see `Upload GeoTIFF for processing` section), set parameters as follows:  
+Чтобы обработать растр, предоставленный пользователем (см. Раздел «Загрузка GeoTIFF» для обработки), установите следующие параметры: 
 
  .. code:: json
 
@@ -227,30 +231,30 @@ To process a user-provided raster (see `Upload GeoTIFF for processing` section),
             "url": "s3://mapflow-rasters/9764750d-6047-407e-a972-5ebd6844be8a/raster.tif"
         }
 
-Response: the newly created processing
+Ответ: вновь созданная обработка.
 
-Restart processing
-^^^^^^^^^^^^^^^^^^
+Перезапустить обработку
+^^^^^^^^^^^^^^^^^^^^^^^
 
-``POST https://platform.geoalert.io/rest/processings/{processingId}/restart``  
+``POST https://api.mapflow.ai/rest/processings/{processingId}/restart``  
 
-Restarts failed partitions of this processing. Doesn't restart non-failed partitions. Each workflow is restarted from the first failed stage. Thus, the least possible amount of work is performed to try and bring the processing into successful state.
+Перезапускает неудачные части обработки (не запускает удавшиеся части обработки). Каждый рабочая обработка перезапускается с первого неудачного этапа. Таким образом, выполняется минимально возможный объем работы, чтобы попытаться привести обработку к лучшему результату.
 
-Delete processing
+Удалить обработку
 ^^^^^^^^^^^^^^^^^
 
-``DELETE https://platform.geoalert.io/rest/processings/{processingId}``
+``DELETE https://api.mapflow.ai/rest/processings/{processingId}``
 
-Deletes this processing. Cascade deletes any child entities.
+Удаляет обработку. Каскад удаляет все дочерние объекты.
 
-Get processing AOIs
-^^^^^^^^^^^^^^^^^^^
+Получить обработку определенной области
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-``GET https://platform.geoalert.io/rest/processings/{processingId}/aois``  
+``GET https://api.mapflow.ai/rest/processings/{processingId}/aois``  
 
-Returns a list of the defined geographical areas for processing in GeoJSON.  
+Возвращает список определенных географических областей для обработки в GeoJSON.  
 
-Response example:
+Пример ответа:
 
 
 .. code:: json
@@ -295,40 +299,40 @@ Response example:
     ]
 
 
-Downloading processing results
+Загрузить результаты обработки
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-``GET https://platform.geoalert.io/rest/processings/{processingId}/result``
+``GET https://api.mapflow.ai/rest/processings/{processingId}/result``
 
-Returns geojson results of this processing as an octet stream. Should only be called on a successfully completed processing.
+Возвращает результаты обработки в .geojson в виде потока октетов. Следует вызывать только при успешно завершенной обработке.
 
 
-Upload GeoTIFF for processing
------------------------------
+Загрузить GeoTIFF для обработки
+-------------------------------
 
-``POST https://platform.geoalert.io/rest/rasters``
+``POST https://api.mapflow.ai/rest/rasters``
 
-Can be used to upload a raster for further processing. Returns URI to the uploaded raster. This URI can be referenced when starting a processing.  
-The request is a multipart request whith the only part "file" - which contains the raster.
-Request example with ``cURL``:  
+Может использоваться для загрузки растра для дальнейшей обработки. Возвращает URI загруженного растра. На этот URI можно ссылаться при запуске обработки. Запрос представляет собой составной запрос, единственная часть которого «file» - содержит растр. 
+
+Пример запроса с cURL:
+  
 
     .. code:: bash
 
           curl -X POST \
-          https://mapflow.ai/api/rasters \
+          https://api.mapflow.ai/rasters \
           -H 'authorization: <Insert auth header value>' \
           -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
           -F file=@custom_raster.tif
 
 
-
-Response example:  
+Пример ответа:  
 
 ``{"uri": "s3://mapflow-rasters/9764750d-6047-407e-a972-5ebd6844be8a/raster.tif"}``
 
 
-API reference
--------------
+API справочник
+--------------
 
 wdName
 """"""
