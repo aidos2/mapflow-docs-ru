@@ -276,8 +276,8 @@
     <span class="p">},</span>
     <span class="nt">&quot;rasterLayer&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;f56ba4c8-30cb-4a54-9aca-cb66214ea2f8&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;tileJsonUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:8500/api/v0/cogs/tiles.json?uri=s3://mapflow-rasters/4f64797d-bfb2-4433-bf56-3bcfd790ee20&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;tileUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:8500/api/v0/cogs/tiles/{z}/{x}/{y}.png?uri=s3://mapflow-rasters/4f64797d-bfb2-4433-bf56-3bcfd790ee20&quot;</span>
+        <span class="nt">&quot;tileJsonUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:8500/api/v0/cogs/tiles.json?url=s3://mapflow-rasters/4f64797d-bfb2-4433-bf56-3bcfd790ee20&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tileUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:8500/api/v0/cogs/tiles/{z}/{x}/{y}.png?url=s3://mapflow-rasters/4f64797d-bfb2-4433-bf56-3bcfd790ee20&quot;</span>
     <span class="p">},</span>
     <span class="nt">&quot;workflowDef&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;9b70a8fc-6e63-4929-b287-c2307d06e678&quot;</span><span class="p">,</span>
@@ -437,7 +437,7 @@
 <div class="section" id="geotiff">
 <h2>Загрузить GeoTIFF для обработки<a class="headerlink" href="#geotiff" title="Ссылка на этот заголовок">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">https://api.mapflow.ai/rest/rasters</span></code></p>
-<p>Может использоваться для загрузки растра для дальнейшей обработки. Возвращает URI загруженного растра. На этот URI можно ссылаться при запуске обработки. Запрос представляет собой составной запрос, единственная часть которого «file» - содержит растр.</p>
+<p>Может использоваться для загрузки растра для дальнейшей обработки. Возвращает url загруженного растра. На этот url можно ссылаться при запуске обработки. Запрос представляет собой составной запрос, единственная часть которого «file» - содержит растр.</p>
 <p>Пример запроса с cURL:</p>
 <blockquote>
 <div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST <span class="se">\</span>
@@ -449,7 +449,7 @@ https://api.mapflow.ai/rasters <span class="se">\</span>
 </div>
 </div></blockquote>
 <p>Пример ответа:</p>
-<p><code class="docutils literal notranslate"><span class="pre">{&quot;uri&quot;:</span> <span class="pre">&quot;s3://mapflow-rasters/9764750d-6047-407e-a972-5ebd6844be8a/raster.tif&quot;}</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">{&quot;url&quot;:</span> <span class="pre">&quot;s3://mapflow-rasters/9764750d-6047-407e-a972-5ebd6844be8a/raster.tif&quot;}</span></code></p>
 </div>
 <div class="section" id="id17">
 <h2>API справочник<a class="headerlink" href="#id17" title="Ссылка на этот заголовок">¶</a></h2>
