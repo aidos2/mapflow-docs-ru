@@ -38,6 +38,18 @@ Mapflow – начало работы
    docs_api/processing_api
    docs_userguides/pipelines
 
+
+*******************
+Использование в ГИС
+*******************
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   docs_api/qgis_mapflow
+
+
 **********************
 Справочные материалы
 **********************
