@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Geoalert API &mdash; документация Mapflow 0.1</title>
+  <title>API обработки данных &mdash; документация Mapflow 0.1</title>
   
 
   
@@ -90,31 +90,31 @@
 <li class="toctree-l1"><a class="reference internal" href="../docs_userguides/prices.html">Тарифы</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Geoalert API</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API обработки данных</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">Авторизация</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#api">Методы API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">Проекты</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id4">Получить проект</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">Поучить демо проект</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">Получить все проекты</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">Создать проект</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">Удалить проект</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Методы API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">Проекты</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Получить проект</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Поучить демо проект</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Получить все проекты</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Создать проект</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Удалить проект</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id9">Обработки</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id10">Получить обработку</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id11">Получить все обработки</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id12">Создать обработку</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id13">Перезапустить обработку</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id14">Удалить обработку</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id15">Получить обработку определенной области</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id16">Загрузить результаты обработки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">Обработки</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Получить обработку</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Получить все обработки</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Создать обработку</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id14">Перезапустить обработку</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">Удалить обработку</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">Получить обработку определенной области</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">Загрузить результаты обработки</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#geotiff">Загрузить GeoTIFF для обработки</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id17">API справочник</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id18">API справочник</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#wdname">wdName</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#source-type">source_type</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#status">status</a></li>
@@ -158,7 +158,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Начало</a> &raquo;</li>
       
-    <li>Geoalert API</li>
+    <li>API обработки данных</li>
       <li class="wy-breadcrumbs-aside">
     <ul class="this-page-menu">
         <li><a href="https://github.com/Geoalert/mapflow-docs-ru/edit/main/docs_api/processing_api.rst"
@@ -171,25 +171,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="geoalert-api">
-<h1>Geoalert API<a class="headerlink" href="#geoalert-api" title="Ссылка на этот заголовок">¶</a></h1>
+  <div class="section" id="api">
+<h1>API обработки данных<a class="headerlink" href="#api" title="Ссылка на этот заголовок">¶</a></h1>
 <blockquote>
 <div><div class="admonition attention">
 <p class="admonition-title">Внимание</p>
-<p>Данный API функционирует отдельно от Mapflow. Проекты и обработки, которые вы создаете в Mapflow, не будут доступны через API, и наоборот. Также ваши кредиты Mapflow нельзя использовать для выполнения обработки через API. Чтобы начать пользоваться API, отправьте нам запрос на <a class="reference external" href="mailto:help&#37;&#52;&#48;geoalert&#46;io">help<span>&#64;</span>geoalert<span>&#46;</span>io</a>.</p>
+<p>Проекты и обработки, которые вы создаете в Mapflow, не будут доступны через API, и наоборот. Также ваши кредиты Mapflow нельзя использовать для выполнения обработки через API. Чтобы начать пользоваться API, отправьте нам запрос на <a class="reference external" href="mailto:help&#37;&#52;&#48;geoalert&#46;io">help<span>&#64;</span>geoalert<span>&#46;</span>io</a></p>
 </div>
 </div></blockquote>
 <div class="section" id="id1">
 <h2>Авторизация<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
 <p>API использует метод авторизации Basic Auth, ознакомиться с подробной информацией о нем вы сможете <a class="reference external" href="https://en.wikipedia.org/wiki/Basic_access_authentication">здесь</a>.</p>
 </div>
-<div class="section" id="api">
-<h2>Методы API<a class="headerlink" href="#api" title="Ссылка на этот заголовок">¶</a></h2>
-</div>
 <div class="section" id="id3">
-<h2>Проекты<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Методы API<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
 <div class="section" id="id4">
-<h3>Получить проект<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h3>
+<h2>Проекты<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="id5">
+<h3>Получить проект<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">https://api.mapflow.ai/{projectId}</span></code></p>
 <p>Возвращает проект с указанным ID.</p>
 <p>Пример ответа:</p>
@@ -226,19 +226,19 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id5">
-<h3>Поучить демо проект<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
-<p>При регистрации демонстрационный проект создается для каждого пользователя.</p>
+<div class="section" id="id6">
+<h3>Поучить демо проект<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
+<p>При регистрации для каждого пользователя создается демонстрационный проект.</p>
 <p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">https://api.mapflow.ai/projects/default</span></code></p>
 <p>Возвращает имя и ID пользователя демонстрационного проекта.</p>
 </div>
-<div class="section" id="id6">
-<h3>Получить все проекты<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="section" id="id7">
+<h3>Получить все проекты<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">https://api.mapflow.ai/rest/projects</span></code></p>
 <p>Возвращает список всех проектов пользователя.</p>
 </div>
-<div class="section" id="id7">
-<h3>Создать проект<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="section" id="id8">
+<h3>Создать проект<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">https://api.mapflow.ai/projects/</span></code></p>
 <p>Создает новый проект и возвращает его непосредственный статус.</p>
 <p>Пример тела запроса:</p>
@@ -251,16 +251,16 @@
 <p>//Указаны название проекта и его произвольное описание.</p>
 <p>Ответ: вновь созданный проект.</p>
 </div>
-<div class="section" id="id8">
-<h3>Удалить проект<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="section" id="id9">
+<h3>Удалить проект<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">DELETE</span> <span class="pre">https://api.mapflow.ai/projects/{projectId}</span></code></p>
 <p>Удаляет проект. Каскад удаляет все дочерние объекты.</p>
 </div>
 </div>
-<div class="section" id="id9">
-<h2>Обработки<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="id10">
-<h3>Получить обработку<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h3>
+<h2>Обработки<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="id11">
+<h3>Получить обработку<a class="headerlink" href="#id11" title="Ссылка на этот заголовок">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">https://api.mapflow.ai/processings/{processingId}</span></code></p>
 <p>Возвращает обработку с определенным ID.</p>
 <p>Пример ответа:</p>
@@ -306,13 +306,13 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id11">
-<h3>Получить все обработки<a class="headerlink" href="#id11" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="section" id="id12">
+<h3>Получить все обработки<a class="headerlink" href="#id12" title="Ссылка на этот заголовок">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">https://api.mapflow.ai/processings</span></code></p>
 <p>Возвращает список всех обработок пользователя.</p>
 </div>
-<div class="section" id="id12">
-<h3>Создать обработку<a class="headerlink" href="#id12" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="section" id="id13">
+<h3>Создать обработку<a class="headerlink" href="#id13" title="Ссылка на этот заголовок">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">https://api.mapflow.ai/rest/processings</span></code></p>
 <p>Создает и запускает обработку, а также возвращает ее непосредственное состояние.</p>
 <p>Пример тела запроса:</p>
@@ -371,18 +371,18 @@
 </div>
 </div></blockquote>
 <p>Ответ: вновь созданная обработка.</p>
-<div class="section" id="id13">
-<h4>Перезапустить обработку<a class="headerlink" href="#id13" title="Ссылка на этот заголовок">¶</a></h4>
+<div class="section" id="id14">
+<h4>Перезапустить обработку<a class="headerlink" href="#id14" title="Ссылка на этот заголовок">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">https://api.mapflow.ai/rest/processings/{processingId}/restart</span></code></p>
 <p>Перезапускает неудачные части обработки (не запускает удавшиеся части обработки). Каждый рабочая обработка перезапускается с первого неудачного этапа. Таким образом, выполняется минимально возможный объем работы, чтобы попытаться привести обработку к лучшему результату.</p>
 </div>
-<div class="section" id="id14">
-<h4>Удалить обработку<a class="headerlink" href="#id14" title="Ссылка на этот заголовок">¶</a></h4>
+<div class="section" id="id15">
+<h4>Удалить обработку<a class="headerlink" href="#id15" title="Ссылка на этот заголовок">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">DELETE</span> <span class="pre">https://api.mapflow.ai/rest/processings/{processingId}</span></code></p>
 <p>Удаляет обработку. Каскад удаляет все дочерние объекты.</p>
 </div>
-<div class="section" id="id15">
-<h4>Получить обработку определенной области<a class="headerlink" href="#id15" title="Ссылка на этот заголовок">¶</a></h4>
+<div class="section" id="id16">
+<h4>Получить обработку определенной области<a class="headerlink" href="#id16" title="Ссылка на этот заголовок">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">https://api.mapflow.ai/rest/processings/{processingId}/aois</span></code></p>
 <p>Возвращает список определенных географических областей для обработки в GeoJSON.</p>
 <p>Пример ответа:</p>
@@ -427,8 +427,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id16">
-<h4>Загрузить результаты обработки<a class="headerlink" href="#id16" title="Ссылка на этот заголовок">¶</a></h4>
+<div class="section" id="id17">
+<h4>Загрузить результаты обработки<a class="headerlink" href="#id17" title="Ссылка на этот заголовок">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">https://api.mapflow.ai/rest/processings/{processingId}/result</span></code></p>
 <p>Возвращает результаты обработки в .geojson в виде потока октетов. Следует вызывать только при успешно завершенной обработке.</p>
 </div>
@@ -451,8 +451,8 @@ https://api.mapflow.ai/rasters <span class="se">\</span>
 <p>Пример ответа:</p>
 <p><code class="docutils literal notranslate"><span class="pre">{&quot;url&quot;:</span> <span class="pre">&quot;s3://mapflow-rasters/9764750d-6047-407e-a972-5ebd6844be8a/raster.tif&quot;}</span></code></p>
 </div>
-<div class="section" id="id17">
-<h2>API справочник<a class="headerlink" href="#id17" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="id18">
+<h2>API справочник<a class="headerlink" href="#id18" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="wdname">
 <h3>wdName<a class="headerlink" href="#wdname" title="Ссылка на этот заголовок">¶</a></h3>
 <blockquote>
