@@ -95,3 +95,4 @@ html_context = {
 # -- Options for Edit on github ----------------------------------------------
 edit_on_gitlab_user = ''
 edit_on_github_branch = 'main'
+
