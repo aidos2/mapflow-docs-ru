@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Urban Mapping – Классификация &mdash; документация Mapflow 0.1</title>
+  <title>QGIS &mdash; документация Mapflow 0.1</title>
   
 
   
@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
     <link rel="search" title="Поиск" href="../search.html" />
-    <link rel="next" title="Forest Mapping – Классификация" href="../docs_forest/classes.html" />
+    <link rel="next" title="Urban Mapping – Классификация" href="../docs_um/classes.html" />
     <link rel="prev" title="Модели Mapflow" href="../docs_userguides/pipelines.html" /> 
 </head>
 
@@ -90,12 +90,23 @@
 <li class="toctree-l1"><a class="reference internal" href="../docs_userguides/prices.html">Тарифы</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../docs_api/processing_api.html">Geoalert API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processing_api.html">API обработки данных</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../docs_userguides/pipelines.html">Модели Mapflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../docs_userguides/pipelines.html#id1">Справочник по моделям</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Urban Mapping – Классификация</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">QGIS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Что такое открытая ГИС - QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Пользовательский интерфейс приложения</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Установка плагина QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#maxar-securewatch">Как использовать сервис спутникового мониторинга Maxar SecureWatch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">Использование других сервисов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">Обработка изображений с локального диска</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../docs_um/classes.html">Urban Mapping – Классификация</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../docs_forest/classes.html">Forest Mapping – Классификация</a></li>
 </ul>
 <ul>
@@ -127,10 +138,10 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Начало</a> &raquo;</li>
       
-    <li>Urban Mapping – Классификация</li>
+    <li>QGIS</li>
       <li class="wy-breadcrumbs-aside">
     <ul class="this-page-menu">
-        <li><a href="https://github.com/Geoalert/mapflow-docs-ru/edit/main/docs_um/classes.rst"
+        <li><a href="https://github.com/Geoalert/mapflow-docs-ru/edit/main/docs_api/qgis_mapflow.rst"
                rel="nofollow">Edit on GitHub</a></li>
     </ul>
       </li>
@@ -140,74 +151,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="urban-mapping">
-<h1>Urban Mapping – Классификация<a class="headerlink" href="#urban-mapping" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Ниже приведен перечень классов по типологии зданий для проекта «Urban Mapping - Городское картирование».</p>
-<p>Здесь мы стремимся присвоить классы объектам, которые имеют четкую интерпретацию либо на спутниковых, либо на аэрофотоснимках, однако метод может быть расширен для включения большего кол-ва классов в зависимости от получаемой точности в различных городских и иных паттернах застройки.</p>
+  <div class="section" id="qgis">
+<h1>QGIS<a class="headerlink" href="#qgis" title="Ссылка на этот заголовок">¶</a></h1>
 <blockquote>
-<div><table class="colwidths-given longtable docutils align-default">
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>CLASS_ID</p></th>
-<th class="head"><p>Класс (рус)</p></th>
-<th class="head"><p>Описание рус</p></th>
-<th class="head"><p>OSM тэг</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Buildings and Construction</p></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>101</p></td>
-<td><p>Многоквартиное жилое здание</p></td>
-<td><p>Жилые многоквартирные здания в разных типах застройки.</p></td>
-<td><p>building=yes,
-building=residential,
-building=appartments,</p></td>
-</tr>
-<tr class="row-even"><td><p>901</p></td>
-<td><p>Тень здания</p></td>
-<td><p>Тень от зданий</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>902</p></td>
-<td><p>Стена здания</p></td>
-<td><p>Стены зданий</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>102</p></td>
-<td><p>Частный дом</p></td>
-<td><p>Малоэтажная застройка. Не принципиальна высота зданий</p></td>
-<td><p>building=house,
-building=residential</p></td>
-</tr>
-<tr class="row-odd"><td><p>103</p></td>
-<td><p>Промышленное здание</p></td>
-<td><p>Промышленные здания.
-Заводы, порты и т.д. характерные наличием промышленной инфраструктуры.</p></td>
-<td><p>building=industrial</p></td>
-</tr>
-<tr class="row-even"><td><p>104</p></td>
-<td><p>Коммерческое здание</p></td>
-<td><p>Офисные помещения, бизнес-центры, торговые центры.
-Характерны наличием парковок в офисные часы</p></td>
-<td><p>building=commercial</p></td>
-</tr>
-<tr class="row-odd"><td><p>105</p></td>
-<td><p>Прочие нежилые здания</p></td>
-<td><p>Прочие здания. Не попало ни в один из вышеперечисленных классов, предположительно является нежилым типом</p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<div><div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>Это приложение для открытой ГИС QGIS (<a class="reference external" href="https://qgis.org">QGIS.org</a>), позволяющее запускать обработки и скачивать результаты, используя платформу Mapflow. Чтобы работать с приложением в QGIS вам понадобится доступ к <a class="reference internal" href="processing_api.html"><span class="doc">API обработки данных</span></a>, пожалуйста, обратитесь к нам для активации доступа на <strong>help&#64;geoalert.io</strong></p>
+</div>
 </div></blockquote>
+<div class="section" id="id1">
+<h2>Что такое открытая ГИС - QGIS<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="id2">
+<h2>Пользовательский интерфейс приложения<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="id3">
+<h2>Установка плагина QGIS<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="maxar-securewatch">
+<h2>Как использовать сервис спутникового мониторинга Maxar SecureWatch<a class="headerlink" href="#maxar-securewatch" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="id4">
+<h2>Использование других сервисов<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="id5">
+<h2>Обработка изображений с локального диска<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
 </div>
 
 
@@ -218,7 +187,7 @@ building=residential</p></td>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../docs_forest/classes.html" class="btn btn-neutral float-right" title="Forest Mapping – Классификация">Следующая <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../docs_um/classes.html" class="btn btn-neutral float-right" title="Urban Mapping – Классификация">Следующая <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../docs_userguides/pipelines.html" class="btn btn-neutral" title="Модели Mapflow"><span class="fa fa-arrow-circle-left"></span> Предыдущая</a>
