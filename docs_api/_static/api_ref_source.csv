@@ -1,5 +1,0 @@
-ПАРАМЕТРЫ КЛАССА / КЛЮЧ,ЗНАЧЕНИЕ,ОПИСАНИЕ
-source_type,XYZ,"URI сервиса изображений в формате «XYZ», например ""https://tile.openstreetmap.org/{z}/{x}/{y}.png"""
-source_type,TMS,Аналогично XYZ с обратной координатой Y
-source_type,WMS,"URI сервиса изображений в формате «WMS», например  ""https://services.nationalmap.gov/arcgis/services/USGSNAIPImagery/ImageServer/WMSServer"""
-source_type,TIF,Одно изображение в формате GeoTIFF
