@@ -337,13 +337,23 @@ API справочник
 wdName
 """"""
 
-   .. tabularcolumns:: |p{5cm}|p{7cm}|p{7cm}|
+.. list-table::
+   :widths: 10 10 30
+   :header-rows: 1
 
-   .. csv-table::
-      :file: _static/api_ref_wdname.csv 
-      :header-rows: 1 
-      :class: longtable
-      :widths: 1 1 1
+   * - КЛЮЧ
+     - ЗНАЧЕНИЕ
+     - ОПИСАНИЕ
+   * - wdName
+     - Buildings Detection
+     - 0.5
+   * - wdName
+     - IN_PROGRESS
+     - Forest Detection
+   * - wdName
+     - Roads Detection
+     - 0.5
+
 
 
 source_type
@@ -376,10 +386,23 @@ source_type
 status
 """"""
 
-   .. tabularcolumns:: |p{5cm}|p{7cm}|p{7cm}|
+.. list-table::
+   :widths: 10 10 30
+   :header-rows: 1
 
-   .. csv-table::
-      :file: _static/api_ref_status.csv 
-      :header-rows: 1 
-      :class: longtable
-      :widths: 1 1 1
+   * - КЛЮЧ
+     - ЗНАЧЕНИЕ
+     - ОПИСАНИЕ
+   * - status
+     - UNPROCESSED
+     - Обработка еще не началась
+   * - status
+     - IN_PROGRESS
+     - Обработка идет (или находится в очереди)
+   * - status
+     - FAILED
+     - Обработка закончилась неудачно - измените неверные параметры или попробуйте перезапустить
+   * - status
+     - OK
+     - Обработка завершена на 100 процентов
+
