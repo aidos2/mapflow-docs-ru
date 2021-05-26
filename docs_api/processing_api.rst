@@ -18,7 +18,7 @@ API использует метод авторизации Basic Auth, озна�
 Получить проект
 """""""""""""""
 
-``GET https://api.mapflow.ai/{projectId}`` 
+``GET https://api.mapflow.ai/rest/{projectId}`` 
 
 Возвращает проект с указанным ID.   
 
@@ -63,7 +63,7 @@ API использует метод авторизации Basic Auth, озна�
 
 При регистрации для каждого пользователя создается демонстрационный проект.
 
-``GET https://api.mapflow.ai/projects/default`` 
+``GET https://api.mapflow.ai/rest/projects/default`` 
 
 Возвращает имя и ID пользователя демонстрационного проекта.
 
@@ -78,7 +78,7 @@ API использует метод авторизации Basic Auth, озна�
 Создать проект
 """""""""""""""""""
 
-``POST https://api.mapflow.ai/projects/``
+``POST https://api.mapflow.ai/rest/projects``
 
 Создает новый проект и возвращает его непосредственный статус.
 
@@ -100,7 +100,7 @@ API использует метод авторизации Basic Auth, озна�
 Удалить проект
 """"""""""""""
 
-``DELETE https://api.mapflow.ai/projects/{projectId}`` 
+``DELETE https://api.mapflow.ai/rest/projects/{projectId}`` 
 
 Удаляет проект. Каскад удаляет все дочерние объекты.
 
@@ -110,7 +110,7 @@ API использует метод авторизации Basic Auth, озна�
 Получить обработку
 """"""""""""""""""
 
-``GET https://api.mapflow.ai/processings/{processingId}``
+``GET https://api.mapflow.ai/rest/processings/{processingId}``
 
 Возвращает обработку с определенным ID.
 
@@ -162,7 +162,7 @@ API использует метод авторизации Basic Auth, озна�
 Получить все обработки
 """"""""""""""""""""""
 
-``GET https://api.mapflow.ai/processings``
+``GET https://api.mapflow.ai/rest/processings``
 
 Возвращает список всех обработок пользователя.
 
@@ -348,14 +348,28 @@ wdName
 
 source_type
 """""""""""
+.. list-table::
+   :widths: 10 10 30
+   :header-rows: 1
 
-   .. tabularcolumns:: |p{5cm}|p{7cm}|p{7cm}|
-
-   .. csv-table::
-      :file: _static/api_ref_source.csv 
-      :header-rows: 1 
-      :class: longtable
-      :widths: 1 1 1
+   * - КЛЮЧ
+     - ЗНАЧЕНИЕ
+     - ОПИСАНИЕ
+   * - source_type
+     - XYZ
+     - URL сервиса изображений в формате «XYZ», например `https://tile.openstreetmap.org/{z}/{x}/{y}.png <https://tile.openstreetmap.org/{z}/{x}/{y}.png>`_
+   * - source_type
+     - TMS
+     - Аналогично XYZ с обратной координатой Y
+   * - source_type
+     - WMS
+     - URL сервиса изображений в формате «WMS», например `https://services.nationalmap.gov/arcgis/services/ USGSNAIPImagery/ImageServer/WMSServer <https://services.nationalmap.gov/arcgis/services/USGSNAIPImagery/ImageServer/WMSServer>`_
+   * - source_type
+     - Quadkey
+     - Индексированный ключ, обозначающий привязку тайлов в XY координатах (например, Bing Maps)
+   * - source_type
+     - TIF/TIFF
+     - Одно изображение в формате GeoTIFF
 
 
 
