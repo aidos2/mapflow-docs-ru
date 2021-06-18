@@ -40,7 +40,8 @@ release = '0.1'
 extensions = [
   'edit_on_github',
   'sphinxemoji.sphinxemoji',
-  'rst2pdf.pdfbuilder'
+  'rst2pdf.pdfbuilder',
+  'sphinx.ext.autosectionlabel'
 ]
 
 source_encoding = 'utf-8-sig'
