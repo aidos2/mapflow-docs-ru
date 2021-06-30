@@ -18,7 +18,7 @@ API использует метод авторизации Basic Auth, озна�
 Получить проект
 """""""""""""""
 
-``GET https://api.mapflow.ai/rest/{projectId}`` 
+``GET https://api.mapflow.ai/rest/projects/{projectId}`` 
 
 Возвращает проект с указанным ID.   
 
