@@ -348,8 +348,8 @@ wdName
      - Buildings Detection
      - 0.5
    * - wdName
-     - IN_PROGRESS
      - Forest Detection
+     - 0.5
    * - wdName
      - Roads Detection
      - 0.5
