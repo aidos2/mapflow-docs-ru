@@ -25,6 +25,7 @@ Mapflow – начало работы
 
    docs_userguides/get_started
    docs_userguides/prices
+   docs_kepler
 
 
 *****************
