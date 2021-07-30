@@ -1,5 +1,5 @@
-QGIS
-=============
+QGIS - Mapflow
+==============
 
 .. attention::
  Данное приложение позволяет использовать возможности платформы Mapflow в QGIS. Для его использования потребуется доступ к :doc:`processing_api` - см. :doc:`авторизация <../docs_userguides/mapflow_auth>`.

@@ -26,7 +26,6 @@ Mapflow – начало работы
    docs_userguides/mapflow_auth
    docs_userguides/get_started
    docs_userguides/prices
-   docs_kepler
 
 *****************
 Сервисы Mapflow
@@ -49,6 +48,8 @@ Mapflow – начало работы
    :maxdepth: 1
 
    docs_api/qgis_mapflow
+   docs_kepler
+
 
 **********************
 Справочные материалы
