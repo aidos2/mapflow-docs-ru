@@ -5,13 +5,13 @@
 Для доступа к платформе из внешних приложений, таких как :doc:`плагин для QGIS <../docs_api/qgis_mapflow>` необходимо получить **API token**.
 Token нужно передавать в параметрах авторизации **Basic Auth** как пароль, а в качестве логина передавать свой логин от аккаунта в Mapflow.ai. 
 
- .. note::
+  .. note::
     Пример авторизации в приложении для QGIS:
 
- .. figure:: _static/api_token_login.png
-  :alt: Preview map
-  :align: center
-  :width: 12cm
+   .. figure:: _static/api_token_login.png
+    :alt: Preview map
+    :align: center
+    :width: 12cm
 
 
 

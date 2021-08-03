@@ -23,7 +23,6 @@ Mapflow – начало работы
    :glob:
    :maxdepth: 1
 
-   docs_userguides/mapflow_auth
    docs_userguides/get_started
    docs_userguides/prices
 
@@ -36,6 +35,7 @@ Mapflow – начало работы
    :maxdepth: 1
 
    docs_api/processing_api
+   docs_userguides/mapflow_auth
    docs_userguides/pipelines
 
 
