@@ -137,7 +137,7 @@
   :width: 15cm
 
  .. note:: 
-  Подробную информацию о kepler.gl вы можете найти в `руководстве пользователя <https://docs.kepler.gl/docs/user-guides/j-get-started>`_.
+  Подробную информацию о kepler.gl вы можете найти в :doc:`нашем руководстве пользователя <../docs_kepler>` или `официальном руководстве kepler.gl <https://docs.kepler.gl/docs/user-guides/j-get-started> `.
 
 Работа с API
 ------------

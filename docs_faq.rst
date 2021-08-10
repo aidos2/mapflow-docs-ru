@@ -89,14 +89,11 @@ FAQ
 
 **Есть ли у вас документация по работе с платформой?**
 
-    `Да <https://ru.docs.mapflow.ai/index.html>`_.
+    :doc:`Да <index>`.
 
 **Есть ли у вас API?**
 
- Да, `Geoalert API <https://ru.docs.mapflow.ai/docs_api/processing_api.html>`_. 
- 
- .. important:: 
-    Mapflow - это веб-приложение **платформы Geoalert**. **Geoalert API** - это отдельный инструмент. Это означает, что для его использования нужно завести отдельную учетную запись, написав нам на help@geoalert.io. При использовании API проекты и обработки, которые вы создали в Mapflow, будут недоступны, и наоборот.     
+ Да, :doc:`Geoalert API <../docs_api/processing_api>`.    
 
 **Есть ли у вас интеграция с ГИС?**
 
