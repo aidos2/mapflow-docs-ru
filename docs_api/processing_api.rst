@@ -14,7 +14,7 @@ API обработки данных
 Авторизация
 -----------
 
-API использует метод авторизации Basic Auth, ознакомиться с подробной информацией о нем вы сможете `здесь <https://en.wikipedia.org/wiki/Basic_access_authentication>`_.
+API использует метод авторизации Basic Auth, как получить логин и API token описано :doc:`здесь <../docs_userguides/mapflow_auth>`.
 
 Методы API
 -----------
