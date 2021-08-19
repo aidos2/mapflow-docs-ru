@@ -348,47 +348,37 @@ wdName
 """"""
 
 .. list-table::
-   :widths: 10 10 30
+   :widths: 10 30
    :header-rows: 1
 
-   * - КЛЮЧ
-     - ЗНАЧЕНИЕ
+   * - ЗНАЧЕНИЕ
      - ОПИСАНИЕ
-   * - wdName
-     - Buildings Detection
-     - 0.5
-   * - wdName
-     - Forest Detection
-     - 0.5
-   * - wdName
-     - Roads Detection
-     - 0.5
+   * - Buildings Detection
+     - Распознавание зданий и строений
+   * - Forest Detection
+     - Распознавание древесной растительности
+   * - Roads Detection
+     - Распознавание дорог
 
 
 
 source_type
 """""""""""
 .. list-table::
-   :widths: 10 10 30
+   :widths: 10 30
    :header-rows: 1
 
-   * - КЛЮЧ
-     - ЗНАЧЕНИЕ
+   * - ЗНАЧЕНИЕ
      - ОПИСАНИЕ
-   * - source_type
-     - XYZ
+   * - XYZ
      - URL сервиса изображений в формате «XYZ», например `https://tile.openstreetmap.org/{z}/{x}/{y}.png <https://tile.openstreetmap.org/{z}/{x}/{y}.png>`_
-   * - source_type
-     - TMS
+   * - TMS
      - Аналогично XYZ с обратной координатой Y
-   * - source_type
-     - WMS
+   * - WMS
      - URL сервиса изображений в формате «WMS», например `https://services.nationalmap.gov/arcgis/services/ USGSNAIPImagery/ImageServer/WMSServer <https://services.nationalmap.gov/arcgis/services/USGSNAIPImagery/ImageServer/WMSServer>`_
-   * - source_type
-     - Quadkey
+   * - Quadkey
      - Индексированный ключ, обозначающий привязку тайлов в XY координатах (например, Bing Maps)
-   * - source_type
-     - TIF/TIFF
+   * - TIF/TIFF
      - Одно изображение в формате GeoTIFF
 
 
@@ -397,22 +387,17 @@ status
 """"""
 
 .. list-table::
-   :widths: 10 10 30
+   :widths: 10 30
    :header-rows: 1
 
-   * - КЛЮЧ
-     - ЗНАЧЕНИЕ
+   * - ЗНАЧЕНИЕ
      - ОПИСАНИЕ
-   * - status
-     - UNPROCESSED
+   * - UNPROCESSED
      - Обработка еще не началась
-   * - status
-     - IN_PROGRESS
+   * - IN_PROGRESS
      - Обработка идет (или находится в очереди)
-   * - status
-     - FAILED
+   * - FAILED
      - Обработка закончилась неудачно - измените неверные параметры или попробуйте перезапустить
-   * - status
-     - OK
+   * - OK
      - Обработка завершена на 100 процентов
 
