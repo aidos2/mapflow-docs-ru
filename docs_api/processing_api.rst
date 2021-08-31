@@ -1,15 +1,18 @@
 API обработки данных
 ====================
 
- .. attention::
+.. attention::
     Проекты и обработки, которые вы создаете в Mapflow, не будут доступны через API, и наоборот. Также ваши кредиты Mapflow нельзя использовать для выполнения обработки через API. Чтобы начать пользоваться API, используйте логин Mapflow и API token, который нужно сгенерировать в `настройках профиля <https://app.mapflow.ai/account>`_ (см. :doc:`авторизация для работы с Mapflow API <../docs_userguides/mapflow_auth>`). 
 
- .. note::
+.. note::
     .. figure:: _static/postman_logo.png
        :alt: Preview results
        :align: left
        :width: 1cm
    Запустите у себя `Коллекцию запросов API для Postman <https://documenter.getpostman.com/view/5400715/TzmCiu5h>`_.
+
+.. important::
+  При загрузке собственных изображений для обработки через API платформы Mapflow необходимо следовать требованиям, указанным на странице с :doc:`описанием моделей <../docs_userguides/pipelines>`. Запрос с помощью по предобработке данных отправляйте на help@geoalert.io.
 
 Авторизация
 -----------

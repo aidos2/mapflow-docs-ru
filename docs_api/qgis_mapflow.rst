@@ -270,3 +270,6 @@ QGIS - Mapflow
          :alt: Upload TIF, select from list
          :align: center
          :width: 15cm
+
+.. important::
+  При загрузке собственных изображений для обработки через API платформы Mapflow необходимо следовать требованиям, указанным на странице с :doc:`описанием моделей <../docs_userguides/pipelines>`. Запрос с помощью по предобработке данных отправляйте на help@geoalert.io
