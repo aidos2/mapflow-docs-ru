@@ -154,6 +154,6 @@ Mapflow предоставляет сервис **Rest API**, чтобы зап�
  .. figure:: _static/api_tab.png
    :alt: API tab
    :align: center
-   :width: 15cm
+   :width: 8cm
 
 
